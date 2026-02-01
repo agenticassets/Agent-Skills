@@ -1,7 +1,21 @@
 ---
 name: pyfixest-latex
-description: |
-  Generate publication-quality LaTeX tables and figures from PyFixest econometric models for academic research papers. Use when the user needs to: (1) Create regression tables (standard, dynamic/event study, robustness with grouped columns) from pyfixest.feols() models, (2) Generate summary statistics tables from pandas DataFrames, (3) Create event study plots with confidence intervals, treatment assignment heatmaps, or coefficient comparison forest plots, (4) Export LaTeX .tex files or publication-quality PNG figures for academic manuscripts. Covers DiD, staggered adoption, panel regression, and general fixed-effects econometric workflows. Standalone module — works in any project with pyfixest, pandas, numpy, scipy, matplotlib installed.
+description: Use when generating publication-quality LaTeX tables and figures from PyFixest econometric models, including regression tables, event study plots, and summary statistics for academic research papers.
+triggers:
+  - PyFixest
+  - LaTeX tables
+  - econometric
+  - regression table
+  - event study
+  - DiD
+  - difference-in-differences
+  - fixed effects
+  - panel regression
+  - research paper
+  - academic publication
+role: specialist
+scope: implementation
+output-format: code
 ---
 
 # PyFixest LaTeX Generator
@@ -91,95 +105,50 @@ create_regression_table(
 
 Full API: See `references/tables-api.md` and `references/figures-api.md`
 
-## Common Patterns
+## Example Templates & Assets
 
-### Pattern 1: Standard DiD Regression Table
+**Complete DiD Analysis Template** (849 lines):
+- `assets/example_did_analysis_template.py` - Production-ready DiD analysis with DidConfig class
+- Quick start: Copy, customize 7 settings in DidConfig, run
+- See [references/did-template-quick-reference.md](references/did-template-quick-reference.md) for 30-second setup
+- See [references/did-template-guide.md](references/did-template-guide.md) for comprehensive documentation
 
-```python
-models = [
-    pf.feols("Y ~ treat | unit + year", df, vcov={"CRV1": "unit"}),
-    pf.feols("Y ~ treat + X1 + X2 | unit + year", df, vcov={"CRV1": "unit"}),
-    pf.feols("Y ~ treat + X1 + X2 + X3 | unit + year", df, vcov={"CRV1": "unit"}),
-]
+**Modular Function Examples**:
+- `assets/1---example_summary_statistics.py` - Standalone summary stats demonstration
+- `assets/2---example_figure_usage.py` - Standalone figure generation examples
+- `assets/3---example_enhanced_table_generator.py` - Standalone table generation examples
+- `assets/4---run_all_examples.py` - Orchestrator to run all modular examples
 
-create_regression_table(
-    models=models,
-    model_names=["No Controls", "Base Controls", "Full Controls"],
-    title="Difference-in-Differences Results",
-    label="tab:did_main",
-    variable_labels={"treat": "Treatment $\\times$ Post"},
-    depvar_labels={"Y": "Outcome"},
-    felabels={"unit": "Unit FE", "year": "Year FE"}
-)
-```
+**Which to use?**
+- **DiD template**: Copy for complete analysis workflow (data → tables → figures)
+- **Modular examples**: Learn individual functions in isolation, mix-and-match
 
-### Pattern 2: Event Study Plot + Table
+## Reference Documentation
 
-```python
-# Fit dynamic model
-dynamic = pf.feols(
-    "Y ~ i(year, ever_treated, ref=14) | unit + year",
-    df, vcov={"CRV1": "unit"}
-)
+Use these guides to learn specific patterns and troubleshoot issues:
 
-# Plot
-create_event_study_plot(
-    model=dynamic,
-    title="Treatment Effects Over Time",
-    time_var="year", treat_var="ever_treated",
-    reference_period=14, treatment_period=15,
-    style="filled", confidence_level=0.05
-)
+**Starting Out?**
+- Read [workflow-patterns.md](references/workflow-patterns.md) for complete analysis structure, UTF-8 setup, and best practices
 
-# Table
-create_dynamic_table(
-    models=dynamic,
-    title="Dynamic Treatment Effects",
-    label="tab:event_study",
-    time_var="year", treat_var="ever_treated",
-    reference_period=14, treatment_period=15,
-    felabels={"unit": "Unit FE", "year": "Year FE"}
-)
-```
+**Preparing Data?**
+- Read [data-requirements.md](references/data-requirements.md) for DataFrame structure, panel data setup, and validation
 
-### Pattern 3: Summary Statistics
+**Need Usage Examples?**
+- Read [common-patterns.md](references/common-patterns.md) for 10 complete patterns (DiD, event studies, robustness checks, multiple outcomes)
 
-```python
-create_summary_statistics_table(
-    data=df,
-    variables=["Y", "treat", "X1", "X2", "X3"],
-    variable_labels={
-        "Y": "Outcome Variable",
-        "treat": "Treatment Indicator",
-        "X1": "Log(Assets)",
-        "X2": "Leverage",
-        "X3": "Market Cap"
-    },
-    title="Descriptive Statistics",
-    label="tab:summary",
-    digits=3,
-    percentiles=[0.25, 0.5, 0.75]
-)
-```
+**DiD Template Documentation?**
+- Read [did-template-quick-reference.md](references/did-template-quick-reference.md) for 30-second DiD setup
+- Read [did-template-guide.md](references/did-template-guide.md) for comprehensive DiD guide
 
-### Pattern 4: Robustness Table with Grouped Columns
+**Customizing Functions?**
+- Read [tables-api.md](references/tables-api.md) for all table function parameters
+- Read [figures-api.md](references/figures-api.md) for plot customization (colors, styles, CI levels)
 
-```python
-main = [pf.feols("Y ~ treat | unit + year", df, vcov={"CRV1": "unit"})]
-robust = [
-    pf.feols("Y ~ treat | unit + year", df, vcov="hetero"),
-    pf.feols("Y2 ~ treat | unit + year", df, vcov={"CRV1": "unit"}),
-]
+**Troubleshooting?**
+- Read [troubleshooting.md](references/troubleshooting.md) for common issues and solutions
 
-create_robustness_table(
-    model_groups=[main, robust],
-    group_names=["Main Specification", "Robustness Checks"],
-    title="Specification Sensitivity Analysis",
-    label="tab:robustness",
-    variable_labels={"treat": "Treatment Effect"},
-    felabels={"unit": "Unit FE", "year": "Year FE"}
-)
-```
+**Using Statsmodels Instead of PyFixest?**
+- Read [stargazer-alternative.md](references/stargazer-alternative.md)
 
 ## Critical Rules
 
@@ -234,8 +203,3 @@ All tables use this LaTeX structure:
 \end{table}
 ```
 
-## Detailed Reference
-
-- **Table function parameters**: Read `references/tables-api.md` when constructing tables with non-default parameters
-- **Figure function parameters**: Read `references/figures-api.md` when customizing plots (colors, styles, CI levels)
-- **Stargazer alternative**: Read `references/stargazer-alternative.md` when working with statsmodels (not PyFixest) models

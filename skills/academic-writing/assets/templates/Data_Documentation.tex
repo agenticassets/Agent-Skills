@@ -1,0 +1,308 @@
+% TEMPLATE NOTE: This is a generic template document for documenting data sources and methodology.
+% This file can be compiled standalone for reference, or the content can be integrated into
+% an Appendix section in Main.tex using \input{sections/Data_Documentation.tex}
+%
+% To adapt this template:
+% 1. Replace [PLACEHOLDER] items with your specific data sources and variables
+% 2. Update methodology sections with your actual analysis approach
+% 3. Modify variable definitions to match your project requirements
+% 4. For integration into Main.tex, remove \documentclass-\begin{document} and \end{document}
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{float} % For [H] placement of figures/tables
+
+% Custom commands for consistency
+\newcommand{\variablefontsize}{\fontsize{9pt}{11pt}\selectfont} % Adjust font size for variable definitions
+\newcommand{\tablefontsize}{\fontsize{10pt}{12pt}\selectfont} % Adjust font size for tables
+
+% Page style (no header/footer for simplicity, but can be customized)
+\pagestyle{plain}
+
+% Adjust paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\section*{Data Sources and Methodology Documentation}
+\subsection*{[RESEARCH PROJECT TITLE]}
+
+\subsubsection*{Overview}
+This document describes the data sources, variable construction methods, and analytical methodology for the research project examining [RESEARCH QUESTION/HYPOTHESIS].
+The documentation provides details on [PRIMARY DATA SOURCE(S)] and how [PRIMARY OUTCOME VARIABLE] is constructed and measured across the sample.
+
+---
+
+\section*{1. Data Sources}
+
+\subsection*{1.1 Primary Data Sources}
+
+\textbf{[Data Source 1: Primary Market/Firm Data]}
+\begin{itemize}
+    \item [Time frequency and coverage period: e.g., daily/monthly, YYYY-YYYY]
+    \item [Key variables provided: e.g., returns, market cap, firm characteristics]
+    \item [Additional variables: e.g., location, sector, size indicators]
+    \item Used for: [Primary analysis purpose]
+    \item Files: [Format and storage location specification]
+\end{itemize}
+
+\textbf{[Data Source 2: Secondary Financial Data]}
+\begin{itemize}
+    \item [Specific data type and frequency: e.g., quarterly accounting data, YYYY-YYYY]
+    \item [Firm characteristics available: e.g., financial statements, accounting variables]
+    \item [Geographic/identifying information: e.g., headquarters location]
+    \item Used for: [Purpose: e.g., control variables, firm linking, sample construction]
+\end{itemize}
+
+\textbf{[Data Source 3: Optional Additional Financial Data]}
+\begin{itemize}
+    \item [Data type and coverage: e.g., analyst forecasts, YYYY-YYYY]
+    \item [Specific measures: e.g., forecast dispersion, consensus estimates]
+    \item [Coverage and timing: e.g., frequency of measurements, availability]
+    \item Used for: [Purpose in analysis]
+\end{itemize}
+
+\textbf{[Data Source 4: Factor/Risk Data]}
+\begin{itemize}
+    \item [Type of factors or risk data: e.g., factor returns, benchmark data]
+    \item [Frequency and coverage: e.g., daily returns, YYYY-YYYY]
+    \item [Specific factors included: e.g., market, size, value, etc.]
+    \item Used for: [Purpose: e.g., risk adjustment, robustness checks]
+\end{itemize}
+
+\subsection*{1.2 Treatment and Exogenous Variables}
+
+\textbf{[Primary Treatment/Exposure Variable Source]}
+\begin{itemize}
+    \item [Description of treatment/exposure: e.g., geographic, temporal, firm-level]
+    \item [Measurement level: e.g., county-level, firm-level, industry-level]
+    \item [Temporal coverage and frequency: e.g., annual, quarterly]
+    \item [Source and documentation: cite original data source]
+\end{itemize}
+
+\textbf{[Alternative Data Source: e.g., Additional Measures or Proxies]}
+\begin{itemize}
+    \item [Description and measurement approach]
+    \item [How it relates to primary treatment variable]
+    \item [Time periods and frequencies: YYYY-YYYY]
+    \item [Aggregation method: e.g., geographic, temporal aggregation]
+\end{itemize}
+
+\subsection*{1.3 Control Variables and Demographic Data}
+
+\textbf{[Demographic/Economic Control Data Source]}
+\begin{itemize}
+    \item [Geographic level: e.g., county-level, state-level]
+    \item [Variables available: e.g., population, income, education, employment]
+    \item [Frequency and coverage: YYYY-YYYY, annual/quarterly]
+    \item [Linking method to analysis sample]
+\end{itemize}
+
+\textbf{[Additional Control Variables Source]}
+\begin{itemize}
+    \item [Type of variables: e.g., economic indicators, market conditions]
+    \item [Specific measures: list key variables]
+    \item [Coverage period and frequency]
+\end{itemize}
+
+
+
+---
+
+\section*{2. Variable Construction Methodology}
+
+\subsection*{2.1 Primary Outcome Variable}
+
+\textbf{[Primary Outcome Variable: Name and Definition]}
+\begin{itemize}
+    \item \textbf{Description}: [Description of what this variable measures and its theoretical importance]
+    \item \textbf{Measurement approach}: [How variable is calculated: formula, time-series method, etc.]
+    \item \textbf{Data inputs}: [Which source data are used in construction]
+    \item \textbf{Frequency}: [Unit of observation: daily, monthly, annual; firm-level, industry-level, etc.]
+\end{itemize}
+
+\textbf{Construction Process:}
+\begin{enumerate}
+    \item [Step 1: Data preparation or filtering]
+    \item [Step 2: Raw variable calculation or extraction]
+    \item [Step 3: Aggregation or transformation (if applicable)]
+    \item [Step 4: Quality checks or validation]
+    \item [Step 5: Linking to other datasets (if applicable)]
+\end{enumerate}
+
+\subsection*{2.2 Secondary Outcome or Risk Variables}
+
+\textbf{[Secondary Variable Name: Alternative Measure]}
+\begin{itemize}
+    \item \textbf{Description}: [What this variable measures]
+    \item \textbf{Methodology}: [Econometric or calculation approach]
+    \item \textbf{References}: [If using established methodology, cite relevant papers]
+    \item \textbf{Frequency and aggregation}: [Temporal frequency and level of aggregation]
+\end{itemize}
+
+\textbf{Construction Process:}
+\begin{enumerate}
+    \item [Step 1: Data sourcing and preparation]
+    \item [Step 2: Calculate base variables from raw data]
+    \item [Step 3: Perform estimation (e.g., regression, factor extraction)]
+    \item [Step 4: Extract key measure of interest from results]
+    \item [Step 5: Aggregate to appropriate level]
+\end{enumerate}
+
+\subsection*{2.3 Alternative Data Source Processing}
+
+\textbf{[Alternative Data Source: Processing and Integration]}
+\begin{itemize}
+    \item \textbf{Raw data format}: [Data format and structure as received]
+    \item \textbf{Cleaning steps}: [Standardization, deduplication, validation]
+    \item \textbf{Variable extraction}: [Specific variables or measures derived]
+    \item \textbf{Temporal aggregation}: [How data is transformed to match panel structure]
+\end{itemize}
+
+\textbf{Multi-Step Processing Pipeline:}
+\begin{enumerate}
+    \item [Step 1: Name standardization and disambiguation]
+    \item [Step 2: Data retrieval and validation]
+    \item [Step 3: Batching or rate-limit management (if applicable)]
+    \item [Step 4: Cleaning and quality assurance]
+    \item [Step 5: Temporal or geographic aggregation]
+    \item [Step 6: Linkage to main analysis sample]
+\end{enumerate}
+
+\textbf{Variable Definitions:}
+\begin{itemize}
+    \item \texttt{[Variable\_Name\_1]}: [Description; transformation if applicable]
+    \item \texttt{[Variable\_Name\_2]}: [Description; e.g., log-transformed version]
+    \item \texttt{[Variable\_Name\_3]}: [Description; e.g., demeaned or standardized version]
+\end{itemize}
+
+\subsection*{2.4 Control and Classification Variables}
+
+\textbf{[Control Variable Category 1: e.g., Firm Characteristics]}
+\begin{itemize}
+    \item \texttt{[Variable\_1]}: [Definition and source]
+    \item \texttt{[Variable\_2]}: [Definition and source]
+    \item \texttt{[Variable\_3]}: [Definition and source; e.g., calculated as ratio]
+\end{itemize}
+
+\textbf{[Control Variable Category 2: e.g., Risk or Performance Measures]}
+\begin{verbatim}
+// [Description of calculation approach]
+[Formula or pseudocode if complex calculation]
+// Aggregation: [temporal or structural aggregation if applicable]
+\end{verbatim}
+
+\subsection*{2.5 Classification and Categorical Variables}
+
+\textbf{[Classification Scheme 1: e.g., Percentile-Based Sorting]}
+\begin{verbatim}
+// [Description of classification logic]
+// Calculation by [time period, group, or other dimension]
+// Generate indicators for each category or percentile
+\end{verbatim}
+
+\textbf{[Classification Scheme 2: e.g., Discrete Categories]}
+\begin{itemize}
+    \item [Category 1]: [Criteria for assignment]
+    \item [Category 2]: [Criteria for assignment]
+    \item [Category 3]: [Criteria for assignment]
+\end{itemize}
+
+---
+
+\section*{3. Data Integration and Panel Construction}
+
+\subsection*{3.1 Linking Methodology}
+
+\textbf{[Primary Linking Strategy: e.g., GVKEY or Firm Identifier]}
+\begin{itemize}
+    \item [Primary identifier: description and source]
+    \item [Secondary identifiers: alternative matching keys (e.g., CUSIP, CIK, ticker)]
+    \item [Special handling for: e.g., corporate actions, ticker changes, delistings]
+    \item [Validation approach: method for validating link quality]
+\end{itemize}
+
+\textbf{[Geographic Linking: e.g., County or State-Level Matching]}
+\begin{itemize}
+    \item [Geographic identifier source: e.g., firm headquarters location]
+    \item [Geographic code system: e.g., FIPS county codes, state codes]
+    \item [Aggregation approach: geographic level used for matching controls]
+    \item [Handling missing data: approach for firms with missing location]
+\end{itemize}
+
+\textbf{[Additional Linking Dimensions: If Applicable]}
+\begin{itemize}
+    \item [Linking dimension 1: e.g., industry classification or temporal matching]
+    \item [Linking dimension 2: e.g., sector or size-based groupings]
+\end{itemize}
+
+\subsection*{3.2 Sample Construction and Filters}
+
+\textbf{Analysis Sample Timeline:}
+\begin{itemize}
+    \item [Main analysis period: YYYY-YYYY]
+    \item [Alternative periods for robustness: YYYY-YYYY (if applicable)]
+    \item [Data availability constraints: explanation of why certain variables have different time coverage]
+    \item [Justification]: [Why this time period was chosen]
+\end{itemize}
+
+\textbf{Sample Inclusion and Exclusion Criteria:}
+\begin{verbatim}
+// Keep observations meeting inclusion criteria
+// [Criteria 1: e.g., valid firm identifiers and year information]
+// [Criteria 2: e.g., minimum data requirements per observation]
+// [Criteria 3: e.g., industry or geographic restrictions (if applicable)]
+
+// Remove outliers and invalid observations
+// [Exclusion 1: e.g., drop observations with missing key variables]
+// [Exclusion 2: e.g., drop observations below minimum sample size]
+// [Exclusion 3: e.g., winsorize or trim extreme values]
+\end{verbatim}
+
+\textbf{Sample Restrictions Justification:}
+\begin{itemize}
+    \item [Restriction 1: why important for analysis]
+    \item [Restriction 2: how it affects sample composition]
+    \item [Restriction 3: trade-offs with sample size]
+\end{itemize}
+
+\subsection*{3.3 Final Panel Structure}
+
+\textbf{Panel Characteristics:}
+\begin{itemize}
+    \item \textbf{Panel structure}: [Unit of analysis: firm-year, firm-quarter, firm-month, etc.]
+    \item \textbf{Balance}: [Balanced or unbalanced; if unbalanced, explain why firms enter/exit]
+    \item \textbf{Final sample size}: [Number of firms, observations, time periods]
+    \item \textbf{Data density}: [Percentage non-missing for key variables]
+\end{itemize}
+
+\textbf{Variables in Final Dataset:}
+\begin{itemize}
+    \item [Primary outcome variable(s): count and names]
+    \item [Treatment/exposure variable: description]
+    \item [Control variables: number and categories]
+    \item [Identifiers and time variables: firm ID, year, month, etc.]
+    \item [Weights or other adjustments: if applicable]
+\end{itemize}
+
+\textbf{Data Quality and Validation:}
+\begin{itemize}
+    \item [Missing data handling: imputation or deletion strategy]
+    \item [Outlier treatment: winsorization levels, dropped categories]
+    \item [Validation checks performed: cross-checks with original sources]
+    \item [Replication: reproducibility of dataset construction]
+\end{itemize}
+
+
+
+\end{document} 

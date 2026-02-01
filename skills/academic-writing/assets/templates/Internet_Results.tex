@@ -1,0 +1,175 @@
+
+%%%%%%%%%%  RESET TABLE/FIGURE COUNT WITH "A"  %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{A.\arabic{table}}
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{A.\arabic{figure}}
+\clearpage
+
+%% ============================================================================
+%% INTERNET APPENDIX: ROBUSTNESS CHECKS AND ADDITIONAL SPECIFICATIONS
+%% ============================================================================
+%%
+%% This appendix presents additional robustness specifications, alternative
+%% definitions, dynamic analyses, and mechanism tests supporting main results.
+%% All tables follow the format of main results with systematic variations in:
+%% - Variable definitions and transformations
+%% - Dynamic specifications (lags, leads, event windows)
+%% - Interaction terms and mechanism tests
+%% - Alternative controls and fixed effect structures
+%% - Sample variations and subgroup analyses
+%%
+%% Template Instructions:
+%% 1. Replace [TREATMENT] with main independent variable name
+%% 2. Replace [OUTCOME] with main dependent variable name
+%% 3. Replace [ROBUSTNESS_SPEC] with specification description
+%% 4. Replace table input paths: Results/Tables/Table_A[N]_[NAME].tex
+%% 5. Adjust table width (\resizebox parameter) as needed for column count
+%% ============================================================================
+
+\clearpage
+
+%%%%%%%%%%  TABLE A.1: LAGGED OUTCOME SPECIFICATION  %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{[TREATMENT] and [OUTCOME]: Controlling for Lagged Dependent Variable}
+\parbox{\linewidth}{\footnotesize
+This table presents robustness checks for the baseline specification by including the lagged dependent variable.
+The regression model is specified as:
+\[
+[OUTCOME]_{i,t} = \delta_1\ [TREATMENT]_{i,t} + \delta_2\ [OUTCOME]_{i,t-1} + \gamma X_{i,t} + \alpha_i + \tau_t + \varepsilon_{i,t}
+\]
+where $[OUTCOME]_{i,t}$ is the main outcome variable for unit $i$ at time $t$, $[TREATMENT]_{i,t}$ is the treatment/policy indicator,
+and $[OUTCOME]_{i,t-1}$ is the lagged outcome controlling for persistence.
+All specifications include unit fixed effects ($\alpha_i$) and time fixed effects ($\tau_t$).
+Column (1) includes baseline variables only.
+Column (2) adds [FIRM/UNIT CONTROL VARIABLES].
+Column (3) includes [COUNTY/REGIONAL CONTROL VARIABLES].
+Standard errors are clustered at the [CLUSTER_VARIABLE].
+}
+\label{Tab:lagged_outcome_specification}
+\vspace{.2cm}
+\scriptsize
+\resizebox{10cm}{!}{%
+%%%%%%%%%%%
+\input{../Results/Tables/Table_A1_lagged_outcome_specification.tex}
+%%%%%%%%%%%
+}
+\end{table}
+\clearpage
+
+%%%%%%%%%%  TABLE A.2: INTERACTION SPECIFICATION  %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{[TREATMENT] Effects on [OUTCOME]: Heterogeneous Effects by [MODERATOR]}
+\parbox{\linewidth}{\footnotesize
+This table examines heterogeneous treatment effects by interacting the main treatment with a moderating variable.
+The regression specification is:
+\[
+[OUTCOME]_{i,t} = \delta_1\ [TREATMENT]_{i,t} \times [MODERATOR]_i + \delta_2\ [TREATMENT]_{i,t} + \delta_3\ [MODERATOR]_i + \gamma X_{i,t} + \alpha_i + \tau_t + \varepsilon_{i,t}
+\]
+where $[MODERATOR]_i$ captures the moderating mechanism at the unit level, measured at [BASELINE YEAR].
+The interaction term tests whether treatment effects vary depending on baseline [MODERATOR] levels.
+All specifications include unit fixed effects ($\alpha_i$) and time fixed effects ($\tau_t$).
+Column (1) includes baseline variables only.
+Column (2) adds [FIRM/UNIT CONTROL VARIABLES].
+Column (3) includes [COUNTY/REGIONAL CONTROL VARIABLES].
+Standard errors are clustered at the [CLUSTER_VARIABLE].
+}
+\label{Tab:heterogeneous_treatment_effects}
+\vspace{.2cm}
+\scriptsize
+\resizebox*{\textwidth}{!}{%
+%%%%%%%%%%%
+\input{../Results/Tables/Table_A2_heterogeneous_effects_by_moderator.tex}
+%%%%%%%%%%%
+}
+\end{table}
+\clearpage
+
+%%%%%%%%%%  TABLE A.3: DYNAMIC SPECIFICATION  %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Dynamic Effects of [TREATMENT] on [OUTCOME]: Event Study Specification}
+\parbox{\linewidth}{\footnotesize
+This table presents a dynamic specification that traces the evolution of treatment effects around the policy adoption year.
+The regression model is specified as:
+\[
+[OUTCOME]_{i,t} = \sum_{k=-K}^{K} \delta_k \cdot \mathbb{1}(t - t^*_i = k) \times [TREATMENT]_i + \gamma X_{i,t} + \alpha_i + \tau_t + \varepsilon_{i,t}
+\]
+where $\delta_k$ represents the treatment effect $k$ years relative to treatment adoption year $t^*_i$ for unit $i$.
+This specification allows the effect to vary over time, revealing the dynamics of adjustment.
+The omitted category is [REFERENCE PERIOD, e.g., ``year -2 before treatment''], showing effects relative to the baseline period.
+All specifications include unit fixed effects ($\alpha_i$) and time fixed effects ($\tau_t$).
+Column (1) includes baseline variables only.
+Column (2) adds [FIRM/UNIT CONTROL VARIABLES].
+Column (3) includes [COUNTY/REGIONAL CONTROL VARIABLES].
+Standard errors are clustered at the [CLUSTER_VARIABLE].
+}
+\label{Tab:dynamic_treatment_effects}
+\vspace{.2cm}
+\scriptsize
+\resizebox{10cm}{!}{%
+%%%%%%%%%%%
+\input{../Results/Tables/Table_A3_dynamic_treatment_effects.tex}
+%%%%%%%%%%%
+}
+\end{table}
+\clearpage
+
+%% ============================================================================
+%% Additional Robustness Specifications Template
+%% ============================================================================
+%%
+%% Below are additional examples showing common robustness checks.
+%% Uncomment and customize as needed for your analysis:
+%%
+%% - Alternative sample restrictions (e.g., excluding outliers, specific subgroups)
+%% - Alternative outcome definitions or measurement approaches
+%% - Alternative clustering structures or standard error calculations
+%% - Placebo tests or falsification exercises
+%% - Subsample analyses by firm size, time period, geographic region, etc.
+%%
+%% Format: Copy the Table A.1 template above, update caption, equation, label,
+%% and table input path. Maintain consistent structure across all tables.
+%%
+%% ============================================================================
+
+% Example template for additional robustness check (uncomment and customize):
+%
+% \clearpage
+%
+% %%%%%%%%%%  TABLE A.4: ALTERNATIVE SPECIFICATION  %%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{table}[ht!]\centering
+% \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+% \caption{[TREATMENT] and [OUTCOME]: [ROBUSTNESS_SPEC]}
+% \parbox{\linewidth}{\footnotesize
+% This table presents results for [description of robustness check].
+% The regression model is specified as:
+% \[
+% [OUTCOME]_{i,t} = \delta_1\ [TREATMENT]_{i,t} + [MODIFICATIONS] + \gamma X_{i,t} + \alpha_i + \tau_t + \varepsilon_{i,t}
+% \]
+% All specifications include unit fixed effects ($\alpha_i$) and time fixed effects ($\tau_t$).
+% Standard errors are clustered at the [CLUSTER_VARIABLE].
+% }
+% \label{Tab:alternative_specification}
+% \vspace{.2cm}
+% \scriptsize
+% \resizebox{10cm}{!}{%
+% %%%%%%%%%%%
+% \input{../Results/Tables/Table_A4_alternative_specification.tex}
+% %%%%%%%%%%%
+% }
+% \end{table}
+% \clearpage

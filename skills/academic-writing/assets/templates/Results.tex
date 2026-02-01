@@ -1,0 +1,178 @@
+% ============================================================================
+% TEMPLATE GUIDANCE FOR RESULTS SECTION
+% ============================================================================
+% This section demonstrates professional academic table formatting and presentation.
+% Replace all specific content with your research variables and findings.
+% Preserve the LaTeX structure and formatting - it follows journal standards.
+% Each table exemplifies best practices for table presentation and captions.
+%
+% Four example table types are included:
+% (1) Summary Statistics - descriptive data for all variables
+% (2) Main Results - core regression results with progressive specifications
+% (3) Interaction Model - heterogeneous effects testing
+% (4) Robustness/Mechanism - alternative specifications and diagnostic tests
+
+% ============================================================================
+% TABLE 1: SUMMARY STATISTICS
+% ============================================================================
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% TEMPLATE GUIDANCE FOR SUMMARY STATISTICS TABLE:
+% - Include all key analysis variables: treatment, outcomes, controls, fixed effects
+% - Order logically: treatment variables first, then primary outcomes, then secondary outcomes, then controls
+% - Report: N, mean, median, standard deviation, min, max for each variable
+% - Provide clear variable definitions in caption explaining methodology and data construction
+
+\caption{\\Descriptive Statistics: Summary of Key Variables}
+\parbox{\linewidth}{\footnotesize
+This table presents descriptive statistics for all variables used in the analysis.
+The sample spans from [Start Year] to [End Year] and includes [Sample Size] observations of [Unit Type].
+[Treatment Variable] represents [brief description of treatment definition and measurement].
+[Primary Outcome] measures [description: how is outcome calculated and what does it represent].
+[Secondary Outcome] captures [description of second key outcome].
+Control variables include firm-level characteristics ([list key firm controls]) and market/geographic characteristics ([list key market controls]).
+All monetary variables are measured in [currency unit] and [inflation adjustment if applicable].
+Variable definitions and construction details are provided in the Data section and Appendix.
+}
+
+\label{tab:summary_statistics}
+\vspace{.2cm}
+
+\scriptsize
+
+\resizebox*{\textwidth}{!}{%
+\input{../Results/Tables/Table_01_summary_statistics}
+}
+\end{table}
+
+\clearpage
+
+% ============================================================================
+% TABLE 2: MAIN RESULTS
+% ============================================================================
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% TEMPLATE GUIDANCE FOR MAIN RESULTS TABLE:
+% - Title should clearly state treatment and outcome variables
+% - Equation should match your empirical specification in methodology section
+% - Progressive specifications show robustness: baseline → add unit controls → add market controls
+% - Report coefficients, standard errors (in parentheses), significance levels (asterisks)
+% - Economic magnitude interpretation: what does a one-unit or one-SD increase mean?
+% - Fixed effects and standard error clustering should match methodology section
+
+\caption{\\Primary Results: Impact of [Treatment Variable] on [Primary Outcome]}
+\parbox{\linewidth}{\footnotesize
+This table presents the results of a [identification strategy] analysis examining the effect of [Treatment Variable] on [Primary Outcome].
+The baseline regression model is specified as:
+\[
+[OUTCOME]_{i,t} = \delta_1\ [TREATMENT]_{i,t} + \delta_2\ [OUTCOME]_{i,t-1} + \gamma X_{i,t} + \alpha_i + \alpha_{st} + \epsilon_{i,t}
+\]
+where $[OUTCOME]_{i,t}$ is [definition of outcome variable: e.g., log of firm performance measure], $[TREATMENT]_{i,t}$ represents [definition of treatment: e.g., indicator or magnitude of treatment], and $[OUTCOME]_{i,t-1}$ is the lagged outcome variable.
+The table reports six specifications with progressively increasing controls.
+Columns (1)---(2) include baseline variables and [unit]-level fixed effects.
+Columns (3)---(4) add firm-level controls including [list key firm controls: e.g., firm size, profitability, leverage].
+Columns (5)---(6) further include market-level controls such as [list key market controls: e.g., industry trends, competition].
+All specifications include [unit]-level fixed effects ($\alpha_i$) and [industry/geographic]×year fixed effects ($\alpha_{st}$).
+Numbers in parentheses are standard errors clustered at the [cluster level].
+The sample spans [Start Year] to [End Year] with [Sample Size] [unit]-year observations.
+Statistical significance: *** p<0.01, ** p<0.05, * p<0.10.
+}
+
+\label{tab:main_results}
+\vspace{.2cm}
+
+\scriptsize
+
+\resizebox{0.95\textwidth}{!}{%
+\input{../Results/Tables/Table_02_main_results}
+}
+\end{table}
+
+\clearpage
+
+% ============================================================================
+% TABLE 3: HETEROGENEOUS EFFECTS / INTERACTION MODEL
+% ============================================================================
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% TEMPLATE GUIDANCE FOR INTERACTION/HETEROGENEITY TABLE:
+% - Use interaction specification to test if effect differs between groups/conditions
+% - Alternatively: split sample and show effects for each group in separate columns
+% - Clearly define what defines [Group 1] vs [Group 2]
+% - Report treatment effect for reference group and interaction term for differential effect
+% - Example: H-block effect on firm performance differs based on firm size or market conditions
+
+\caption{\\Heterogeneous Effects: [Treatment Variable] Impact on [Primary Outcome] by [Moderator Variable]}
+\parbox{\linewidth}{\footnotesize
+This table examines whether the effect of [Treatment Variable] on [Primary Outcome] varies based on [Moderator Variable].
+We estimate the interaction model:
+\[
+[OUTCOME]_{i,t} = \delta_1\ [TREATMENT]_{i,t} + \delta_2\ [MODERATOR]_{i,t} + \delta_3\ ([TREATMENT]_{i,t} \times [MODERATOR]_{i,t}) + \gamma X_{i,t} + \alpha_i + \alpha_{st} + \epsilon_{i,t}
+\]
+where $[TREATMENT]_{i,t}$ captures the baseline effect for [reference group: e.g., low-moderator firms], while $\delta_3$ represents the differential effect for [high-moderator firms or condition].
+[Moderator Variable] is defined as [definition: e.g., median split on firm size or geographic location].
+Columns (1)---(2) examine the effect on [Primary Outcome] with and without controls.
+Columns (3)---(4) examine effects on [Secondary Outcome].
+All specifications include [unit]-level fixed effects and [industry/geographic]×year fixed effects.
+Control variables include [list key controls].
+Standard errors are clustered at the [cluster level].
+The interpretation: when $\delta_3 > 0$, the treatment effect is stronger for [high-moderator group]; when $\delta_3 < 0$, the effect is stronger for [low-moderator group].
+}
+
+\label{tab:heterogeneous_effects}
+\vspace{.2cm}
+
+\scriptsize
+
+\resizebox{0.95\textwidth}{!}{%
+\input{../Results/Tables/Table_03_heterogeneous_effects}
+}
+\end{table}
+
+\clearpage
+
+% ============================================================================
+% TABLE 4: ROBUSTNESS CHECKS / ALTERNATIVE SPECIFICATIONS
+% ============================================================================
+
+\begin{table}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% TEMPLATE GUIDANCE FOR ROBUSTNESS TABLE:
+% - Show main specification alongside 3--4 alternative specifications
+% - Robustness variations typically include: alternative outcome definitions, alternative clustering, sample restrictions, timing windows, or lagged effects
+% - Each column should have a clear label describing the specification variation
+% - Use parallel regression structure to highlight robustness (same variables, different specification)
+
+\caption{\\Robustness Checks: Alternative Specifications of [Treatment Variable] Effect on [Primary Outcome]}
+\parbox{\linewidth}{\footnotesize
+This table presents robustness checks verifying that the main result from Table \ref{tab:main_results} is stable across alternative specifications.
+The baseline specification in Column (1) replicates the main result (from Table \ref{tab:main_results} Column X for comparison).
+Column (2) uses [alternative outcome measurement: e.g., continuous treatment intensity instead of indicator].
+Column (3) restricts the sample to [sample restriction: e.g., large firms, pre-2015 period, or core market].
+Column (4) clusters standard errors at [alternative cluster level: e.g., firm instead of firm-year] rather than the baseline [cluster level].
+Column (5) includes [additional control or fixed effect: e.g., firm×year fixed effects or industry-specific trends].
+All specifications maintain the core regression structure examining the effect of [Treatment Variable] on [Primary Outcome].
+The consistency of coefficients across specifications confirms the robustness of the main finding.
+Sample size varies slightly across specifications due to [explanation: e.g., sample restrictions or missing control variables].
+}
+
+\label{tab:robustness}
+\vspace{.2cm}
+
+\scriptsize
+
+\resizebox{0.95\textwidth}{!}{%
+\input{../Results/Tables/Table_04_robustness}
+}
+\end{table}
+
+\clearpage
+
+

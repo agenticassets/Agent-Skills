@@ -1,47 +1,141 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Claude%20Skills&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=65%20Skills%20%E2%80%A2%209%20Workflows%20%E2%80%A2%20Built%20with%20%E2%9D%A4%EF%B8%8F%20for%20Full-Stack%20Devs&descSize=20&descAlignY=55" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Agent%20Skills&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=12%20Skills%20%E2%80%A2%209%20Workflows%20%E2%80%A2%20Personal%20Skill%20Collection&descSize=20&descAlignY=55" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/jeffallan/claude-skills"><img src="https://img.shields.io/badge/version-0.4.2-blue.svg?style=for-the-badge" alt="Version"/></a>
+  <a href="https://github.com/cas3526/Agent-Skills"><img src="https://img.shields.io/badge/version-0.4.2-blue.svg?style=for-the-badge" alt="Version"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge" alt="License"/></a>
-  <a href="https://github.com/jeffallan/claude-skills"><img src="https://img.shields.io/badge/Claude_Code-Plugin-purple.svg?style=for-the-badge" alt="Claude Code"/></a>
-  <a href="https://github.com/jeffallan/claude-skills/stargazers"><img src="https://img.shields.io/github/stars/jeffallan/claude-skills?style=for-the-badge&color=yellow" alt="Stars"/></a>
-  <a href="https://github.com/jeffallan/claude-skills/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/jeffallan/claude-skills/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI"/></a>
+  <a href="https://github.com/cas3526/Agent-Skills"><img src="https://img.shields.io/badge/Claude_Code-Skills-purple.svg?style=for-the-badge" alt="Claude Code"/></a>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=false&width=800&height=80&lines=Transform+Claude+Code+into+your+expert+pair+programmer;across+the+entire+development+stack" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=false&width=800&height=80&lines=Specialized+skills+for+Python+development,+data+analysis,;research,+automation,+and+AI+integration" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <strong>🎯 <!-- SKILL_COUNT -->65<!-- /SKILL_COUNT --> Skills</strong> • <strong>🚀 <!-- WORKFLOW_COUNT -->9<!-- /WORKFLOW_COUNT --> Workflows</strong> • <strong>🧠 Context Engineering</strong> • <strong>📖 Progressive Disclosure</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Chat2AnyLLM/awesome-claude-skills/blob/main/FULL-SKILLS.md"><img src="https://img.shields.io/github/stars/Chat2AnyLLM/awesome-claude-skills?style=for-the-badge&label=awesome-claude-skills&color=brightgreen&logo=awesomelists&logoColor=white" alt="Awesome Claude Skills"/></a>
-  <a href="https://github.com/BehiSecc/awesome-claude-skills"><img src="https://img.shields.io/github/stars/BehiSecc/awesome-claude-skills?style=for-the-badge&label=awesome-claude-skills&color=brightgreen&logo=awesomelists&logoColor=white" alt="Awesome Claude Skills (BehiSecc)"/></a>
+  <strong>🎯 <!-- SKILL_COUNT -->16<!-- /SKILL_COUNT --> Skills</strong> • <strong>🚀 <!-- WORKFLOW_COUNT -->9<!-- /WORKFLOW_COUNT --> Workflows</strong> • <strong>🧠 Context Engineering</strong> • <strong>📖 Progressive Disclosure</strong>
 </p>
 
 ---
 
+## Overview
+
+This is a personal collection of specialized Claude Code skills organized around PhD research, finance, real estate, and AI/ML development:
+
+- **📚 PhD Academic Business Research**: Econometric analysis (PyFixest, STATA), data manipulation, publication-ready output
+- **💰 Financial Analysis & Services**: WRDS data extraction, financial data analysis, portfolio analytics
+- **🏢 Real Estate (Residential/Commercial)**: Investment analysis, DCF/IRR modeling, institutional underwriting
+- **🤖 AI/ML/AI Agents**: ML pipelines, prompt engineering, AI tool integration via MCP
+- **💻 Development & Technical Writing**: FastAPI APIs, code quality, documentation, automation
+
+**Originally forked from:** [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills)
+
+---
 
 ## Quick Start
 
-Get started in minutes with our **[Quick Start Guide](QUICKSTART.md)**.
+### Installation
 
-**TL;DR:**
 ```bash
-/plugin marketplace add jeffallan/claude-skills
-```
-then
-```bash
-/plugin install fullstack-dev-skills@jeffallan
+# Copy skills to Claude Code directory
+cp -r ./skills/* ~/.claude/skills/
 ```
 
-> **New:** Use `/common-ground` to surface and validate Claude's assumptions about your project before starting work. Add `--graph` to visualize the reasoning structure as a mermaid diagram.
+### Usage
 
-> **Note:** The [Project Workflow Commands](#project-workflow-commands) require an Atlassian MCP server for Jira and Confluence integration. See the **[Atlassian MCP Setup Guide](docs/ATLASSIAN_MCP_SETUP.md)** for configuration instructions.
+Skills activate automatically based on your requests:
+
+```bash
+# Python API Development
+"Build a FastAPI endpoint with async SQLAlchemy"
+→ Activates: fastapi-expert
+
+# Data Analysis
+"Clean this DataFrame and create summary statistics"
+→ Activates: pandas-pro
+
+# Research
+"Generate LaTeX tables from PyFixest models"
+→ Activates: pyfixest-latex
+
+# Debugging
+"Help me debug this stack trace"
+→ Activates: debugging-wizard
+```
+
+---
+
+## Skills Overview
+
+**<!-- SKILL_COUNT -->16<!-- /SKILL_COUNT --> specialized skills** organized by domain:
+
+### 📚 PhD Academic Business Research (4 skills)
+- **academic-writing**: LaTeX manuscript drafting and revision for finance, economics, and real estate research
+- **pyfixest-latex**: PyFixest econometric models to publication-quality LaTeX (DiD, event studies, panel regression)
+- **stata-accounting-research**: STATA code patterns from published accounting research (entropy balancing, PSM, DiD, RDD, IV)
+- **pandas-pro**: DataFrame manipulation, data cleaning, aggregation, time series analysis for research
+
+### 💰 Financial Analysis & Services (3 skills)
+- **wrds-data-pull**: WRDS data extraction (Compustat, CRSP, IBES, Thomson Reuters, BoardEx, ISS, CoreLogic, ZTRAX, CoStar)
+- **pandas-pro**: Financial data analysis, portfolio analytics, return calculations, risk metrics
+- **pyfixest-latex**: Financial econometric analysis and publication-ready output
+
+### 🏢 Real Estate (Residential/Commercial) (1 skill)
+- **cre-investment-analysis**: Commercial real estate investment analysis, DCF/IRR modeling, business plans, institutional underwriting
+
+### 🤖 AI/ML/AI Agents (3 skills)
+- **ml-pipeline**: ML pipelines with MLflow/Kubeflow, experiment tracking, feature stores, model lifecycle
+- **prompt-engineer**: LLM prompt design, chain-of-thought, few-shot learning, evaluation frameworks
+- **mcp-developer**: Model Context Protocol servers/clients for AI tool integration
+
+### 💻 Development & Technical Writing (5 skills)
+- **fastapi-expert**: Async Python APIs with FastAPI, Pydantic V2, async SQLAlchemy, JWT auth
+- **code-documenter**: Docstrings, API docs (OpenAPI/Swagger), documentation sites, user guides
+- **code-reviewer**: PR reviews, code quality audits, security checks, refactoring suggestions
+- **debugging-wizard**: Systematic debugging, error investigation, root cause analysis
+- **n8n-skills**: n8n workflow automation, node configuration, workflow patterns
+
+### 📊 Data Visualization (2 skills)
+- **matplotlib**: Low-level plotting library for full customization, novel plot types, fine-grained control
+- **scientific-visualization**: Publication-ready multi-panel figures with journal-specific formatting (Nature, Science, Cell)
+
+See **[SKILLS_GUIDE.md](SKILLS_GUIDE.md)** for when to use each skill, workflows, and examples.
+
+### Recommended Complementary Skills
+
+These skills work seamlessly with the collection above. **Highly recommended** for document processing in research and real estate workflows:
+
+#### Official Anthropic Document Skills
+
+- **[pdf](https://github.com/anthropics/skills/tree/main/skills/pdf)** - Extract text/tables from PDFs, OCR scanned documents
+  - Essential for: Offering memos, appraisals, research papers, reports
+
+- **[xlsx](https://github.com/anthropics/skills/tree/main/skills/xlsx)** - Read/write Excel spreadsheets, create financial models
+  - Essential for: Rent rolls, operating statements, financial models, data analysis
+  - **Critical for CRE**: Creates professional models with proper formulas and formatting
+
+- **[docx](https://github.com/anthropics/skills/tree/main/skills/docx)** - Process Word documents, create reports
+  - Essential for: Investment memos, business plans, market reports
+
+- **[pptx](https://github.com/anthropics/skills/tree/main/skills/pptx)** - Create/analyze PowerPoint presentations
+  - Essential for: Investment committee presentations, board decks
+
+**Installation**: These skills are built-in to Claude.ai and available at `/mnt/skills/public/` in Claude Code.
+
+**Integration Example**:
+```
+pdf (extract offering memo) → pandas-pro (analyze data) →
+cre-investment-analysis (perform analysis) → xlsx (create model) →
+pptx (create presentation)
+```
+
+#### Discover More Skills
+
+For a comprehensive, up-to-date catalog of available skills:
+
+🔗 **[skills.sh](https://skills.sh/)** - Browse hundreds of community and official skills
+
+---
 
 ## Architecture
 
@@ -50,19 +144,17 @@ then
 Each skill follows this structure:
 
 ```
-skills/react-expert/
-├── SKILL.md                    # Lean core (80 lines)
+skills/fastapi-expert/
+├── SKILL.md                    # Lean core (~80 lines)
 │   ├── Role definition
 │   ├── When to use
 │   ├── Core workflow
 │   └── Routing table          # Points to references
 └── references/                 # Loaded on-demand
-    ├── server-components.md    # RSC patterns
-    ├── react-19-features.md    # use() hook, actions
-    ├── state-management.md     # Context, Zustand, Redux
-    ├── hooks-patterns.md       # Custom hooks, optimization
-    ├── performance.md          # memo, lazy, virtualization
-    └── testing-react.md        # Testing Library patterns
+    ├── async-patterns.md
+    ├── pydantic-v2.md
+    ├── authentication.md
+    └── ...
 ```
 
 **How It Works:**
@@ -71,295 +163,161 @@ skills/react-expert/
 3. Loads specific references only when context requires
 4. 50% faster initial responses, surgical precision when needed
 
-### Project Structure
-
-```
-claude-skills/
-├── .claude-plugin/
-│   ├── plugin.json           # Plugin metadata
-│   └── marketplace.json      # Marketplace configuration
-├── skills/                   # 65 specialized skills
-│   ├── react-expert/
-│   │   ├── SKILL.md
-│   │   └── references/       # 6 reference files
-│   ├── nestjs-expert/
-│   │   ├── SKILL.md
-│   │   └── references/       # 5 reference files
-│   ├── python-pro/
-│   │   ├── SKILL.md
-│   │   └── references/       # Language-specific patterns
-│   └── ... (62 more skills)
-├── commands/
-│   ├── common-ground/        # Context engineering command
-│   │   ├── COMMAND.md
-│   │   └── references/
-│   └── project/              # 9 project workflow commands
-│       ├── discovery/        # Research & validation
-│       ├── planning/         # Epic & implementation planning
-│       ├── execution/        # Ticket implementation
-│       └── retrospectives/   # Reports & completion
-├── docs/
-│   ├── COMMON_GROUND.md      # Context engineering guide
-│   ├── WORKFLOW_COMMANDS.md  # Workflow documentation
-│   └── ATLASSIAN_MCP_SETUP.md # MCP server setup guide
-├── README.md
-├── SKILLS_GUIDE.md          # Quick reference guide
-└── CONTRIBUTING.md          # Contribution guidelines
-```
-
 **Stats:**
-- <!-- SKILL_COUNT -->65<!-- /SKILL_COUNT --> skills
-- <!-- REFERENCE_COUNT -->356<!-- /REFERENCE_COUNT --> reference files
-- ~50% token reduction
-- Covers 30+ frameworks
+- <!-- SKILL_COUNT -->16<!-- /SKILL_COUNT --> skills
+- <!-- REFERENCE_COUNT -->85<!-- /REFERENCE_COUNT --> reference files
+- ~50% token reduction through progressive disclosure
 
-## Skills Overview
-
-**<!-- SKILL_COUNT -->65<!-- /SKILL_COUNT --> specialized skills** across 12 categories:
-
-- **Languages (12)**: Python Pro, TypeScript Pro, JavaScript Pro, Go Pro, Rust Engineer, SQL Pro, C++ Pro, Swift Expert, Kotlin Specialist, C# Developer, PHP Pro, Java Architect
-- **Backend Frameworks (7)**: NestJS Expert, Django Expert, FastAPI Expert, Spring Boot Engineer, Laravel Specialist, Rails Expert, .NET Core Expert
-- **Frontend & Mobile (6)**: React Expert, Next.js Developer, Vue Expert, Angular Architect, React Native Expert, Flutter Expert
-- **Infrastructure (5)**: Kubernetes Specialist, Terraform Engineer, Postgres Pro, Cloud Architect, Database Optimizer
-- **API & Architecture (8)**: GraphQL Architect, API Designer, WebSocket Engineer, Microservices Architect, MCP Developer, Architecture Designer, Feature Forge, Spec Miner
-- **Testing & Quality (4)**: Test Master, Playwright Expert, Code Reviewer, Code Documenter
-- **DevOps & Operations (5)**: DevOps Engineer, Monitoring Expert, SRE Engineer, Chaos Engineer, CLI Developer
-- **Security (2)**: Secure Code Guardian, Security Reviewer
-- **Data & Machine Learning (6)**: Pandas Pro, Spark Engineer, ML Pipeline, Prompt Engineer, RAG Architect, Fine-Tuning Expert
-- **Platform Specialists (4)**: Salesforce Developer, Shopify Expert, WordPress Pro, Atlassian MCP
-- **Specialized (3)**: Legacy Modernizer, Embedded Systems, Game Developer
-- **Workflow (2)**: Debugging Wizard, Fullstack Guardian
-
-See **[SKILLS_GUIDE.md](SKILLS_GUIDE.md)** for when to use each skill, workflows, and examples.
+---
 
 ## Usage Patterns
-
-### Context-Aware Activation
-
-Skills activate automatically based on your request:
-
-```bash
-# Backend Development
-"Implement JWT authentication in my NestJS API"
-→ Activates: NestJS Expert
-→ Loads: references/authentication.md
-
-# Frontend Development
-"Build a React component with Server Components"
-→ Activates: React Expert
-→ Loads: references/server-components.md
-
-# Performance Optimization
-"My React app is slow, help me optimize"
-→ Activates: React Expert + Debugging Wizard
-→ Loads: references/performance.md, references/profiling.md
-
-# Security Review
-"Review this authentication code for security issues"
-→ Activates: Security Reviewer + Secure Code Guardian
-→ Loads: references/auth-patterns.md, references/owasp-top-10.md
-```
 
 ### Multi-Skill Workflows
 
 Complex tasks combine multiple skills:
 
-**Full Feature Development:**
+**Academic Research Paper:**
 ```
-Feature Forge → Architecture Designer → Fullstack Guardian → Test Master → Security Reviewer → DevOps Engineer
-```
-
-**Bug Investigation:**
-```
-Debugging Wizard → Framework Expert → Test Master → Code Reviewer
+wrds-data-pull → pandas-pro → pyfixest-latex → code-documenter → code-reviewer
 ```
 
-**Security Hardening:**
+**Financial Analysis Project:**
 ```
-Secure Code Guardian → Security Reviewer → Test Master
-```
-
-## Context Engineering
-
-### `/common-ground` — Surface Claude's Hidden Assumptions
-
-Claude operates on assumptions about your project—tech stack, coding standards, architecture decisions. This command makes them explicit before they cause misaligned work.
-
-```bash
-/common-ground              # Surface & validate assumptions interactively
-/common-ground --list       # View all tracked assumptions
-/common-ground --check      # Quick validation of existing assumptions
-/common-ground --graph      # Visualize reasoning structure as mermaid diagram
+wrds-data-pull → pandas-pro → code-documenter → code-reviewer
 ```
 
-**How it works:**
-
-1. Claude analyzes your codebase (config files, code patterns, conversation context)
-2. Surfaces assumptions with confidence tiers:
-   - **ESTABLISHED** — High confidence, treat as premises
-   - **WORKING** — Medium confidence, use but flag if contradicted
-   - **OPEN** — Low confidence, ask before assuming
-3. You validate, adjust weights, or reject assumptions
-4. Claude remembers and respects your decisions across sessions
-
-**Example output:**
-
+**Real Estate Investment Analysis:**
 ```
-ESTABLISHED: TypeScript strict mode enabled [inferred from tsconfig.json]
-WORKING: Prefer functional components over classes [inferred from codebase patterns]
-OPEN: Server-side rendering required? [uncertain - needs clarification]
+pandas-pro → cre-investment-analysis → code-documenter
 ```
 
-### `--graph` — Visualize Reasoning Structure
-
-The `--graph` flag generates a mermaid diagram showing the decision tree behind Claude's reasoning—not just what it assumes, but *why*.
-
-```mermaid
-flowchart TD
-    ROOT[Task: Build auth system] --> D1{MVP or Production?}
-    D1 -->|"0.8 [inferred]"| P1[Production-grade]
-    D1 -->|"0.2 [alternative]"| P2[MVP]
-    P1 --> D2{Stateless?}
-    D2 -->|"0.7 [assumed]"| S1[JWT + refresh]
-    D2 -->|"0.3 [uncertain]"| S2[Redis sessions]
+**ML/AI Pipeline:**
+```
+pandas-pro → ml-pipeline → prompt-engineer → mcp-developer → code-documenter
 ```
 
-Node colors indicate confidence: green (chosen), yellow (decision point), orange (uncertain), gray (alternative not taken).
+**API Development:**
+```
+fastapi-expert → debugging-wizard → code-documenter → code-reviewer
+```
 
-## Project Workflow Commands
+**Accounting Research (STATA):**
+```
+wrds-data-pull → stata-accounting-research → code-documenter
+```
 
-Manage your entire development lifecycle with **<!-- WORKFLOW_COUNT -->9<!-- /WORKFLOW_COUNT --> project workflow commands** organized into 4 phases:
-
-| Phase | Commands | Purpose |
-|-------|----------|---------|
-| **Discovery** | `create-epic-discovery`, `synthesize-discovery`, `approve-synthesis` | Research, synthesize, and approve requirements |
-| **Planning** | `create-epic-plan`, `create-implementation-plan` | Analyze codebase and create execution plans |
-| **Execution** | `execute-ticket`, `complete-ticket` | Implement and complete individual tickets |
-| **Retrospectives** | `complete-epic`, `complete-sprint` | Generate reports and close work items |
-
-Commands integrate with **Jira** (ticket management) and **Confluence** (documentation publishing).
-
-See **[docs/WORKFLOW_COMMANDS.md](docs/WORKFLOW_COMMANDS.md)** for detailed workflow diagrams, command reference, and integration guides.
+---
 
 ## Tech Stack Coverage
 
-### Languages
-- TypeScript / JavaScript
-- Python
-- Go
-- Rust
-- C++
-- Swift
-- Kotlin
-- C#
-- PHP
-- Ruby
-- Java
-- SQL
-- Dart
+### Research & Academia
+- **Econometrics**: PyFixest (DiD, event studies, panel regression), STATA (PSM, entropy balancing, RDD, IV)
+- **Data Sources**: WRDS (Compustat, CRSP, IBES, Thomson Reuters, BoardEx, ISS, CoreLogic, ZTRAX)
+- **Output**: LaTeX tables/figures, publication-quality plots
+- **Languages**: Python 3.11+, STATA 18
 
-### Backend
-- NestJS (TypeScript)
-- Django / Django REST Framework (Python)
-- FastAPI (Python)
-- Express (TypeScript)
-- Spring Boot (Java)
-- Laravel (PHP)
-- Ruby on Rails (Ruby)
-- .NET Core (C#)
-- GraphQL APIs
+### Financial Analysis
+- **Data**: pandas, NumPy, SciPy
+- **Sources**: WRDS financial databases
+- **Methods**: Portfolio analytics, return calculations, risk metrics, event studies
+- **Integration**: SQL queries, CUSIP/GVKEY/PERMNO linking
 
-### Frontend
-- React 19 (Server Components, use() hook)
-- Next.js (App Router, Server Actions)
-- Vue 3 (Composition API, Pinia)
-- Angular (Standalone Components, Signals)
-- React Native (Expo, bare workflow)
-- Flutter (Material Design, Cupertino)
+### Real Estate
+- **Analysis**: DCF modeling, IRR analysis, NOI calculations, cap rate analysis
+- **Property Types**: Multifamily, office, retail, industrial, mixed-use
+- **Output**: Investment memos, underwriting models, feasibility studies
 
-### Testing
-- Jest / Vitest
-- Playwright
-- React Testing Library
-- Pytest
+### AI/ML
+- **Pipelines**: MLflow, Kubeflow, experiment tracking, feature stores
+- **LLMs**: Prompt engineering, chain-of-thought, few-shot learning
+- **Integration**: Model Context Protocol (MCP), AI tool development
+- **ML Stack**: scikit-learn, PyTorch, TensorFlow
 
-### Databases
-- PostgreSQL (TypeORM, Prisma, SQLAlchemy)
-- MongoDB (Mongoose, Motor)
-- MySQL / MariaDB
+### Development
+- **Backend**: FastAPI, Pydantic V2, async SQLAlchemy, OpenAPI/Swagger
+- **Automation**: n8n workflow automation, webhook processing
+- **Documentation**: Docstrings, API docs, technical writing
+- **Quality**: Code review, debugging, security audits
 
-### Infrastructure & DevOps
-- Docker & Docker Compose
-- Kubernetes (K8s, Helm)
-- Terraform
-- AWS / Azure / GCP
-- PostgreSQL / MySQL / MongoDB
-- CI/CD (GitHub Actions, GitLab CI)
+---
 
-### Monitoring
-- Prometheus / Grafana
-- ELK Stack
-- DataDog
-- Sentry
+## Project Structure
 
-## Installation Options
-
-### Option 1: Marketplace (Recommended)
-
-```bash
-/plugin marketplace add jeffallan/claude-skills
 ```
-then
-```bash
-/plugin install fullstack-dev-skills@jeffallan
-```
-### Option 2: Installing Skills via `npx add-skill`
-
-You can install standard Claude skills using the `add-skill` CLI:
-
-```bash
-npx add-skill <skill-name>
+Agent-Skills/
+├── .claude-plugin/
+│   ├── plugin.json           # Plugin metadata
+│   └── marketplace.json      # Marketplace configuration
+├── skills/                   # 12 specialized skills
+│   ├── code-documenter/
+│   ├── code-reviewer/
+│   ├── debugging-wizard/
+│   ├── fastapi-expert/
+│   ├── mcp-developer/
+│   ├── ml-pipeline/
+│   ├── pandas-pro/
+│   ├── prompt-engineer/
+│   ├── pyfixest-latex/
+│   ├── cre-investment-analysis/
+│   ├── stata-accounting-research/
+│   └── n8n-skills/
+├── scripts/
+│   ├── update-docs.py        # Update version and counts
+│   └── validate-skills.py    # Validate skill integrity
+├── docs/
+│   └── ...
+├── README.md
+├── SKILLS_GUIDE.md          # Quick reference guide
+├── CLAUDE.md                # Project configuration
+└── CONTRIBUTING.md          # Contribution guidelines
 ```
 
-Please note this method will not install slash commands.
-
-### Option 2: Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/jeffallan/claude-skills.git
-cd claude-skills
-
-# Add as local marketplace
-/plugin marketplace add /absolute/path/to/claude-skills
-
-# Install from local
-/plugin install fullstack-dev-skills@local
-```
-
-### Option 3: Direct Installation
-
-```bash
-# Copy skills directly to Claude Code
-cp -r ./skills/* ~/.claude/skills/
-```
-
-**Note:** Direct installation bypasses plugin management but works for quick testing.
+---
 
 ## Documentation
 
 - **[SKILLS_GUIDE.md](SKILLS_GUIDE.md)** - Quick reference for when to use each skill
-- **[docs/COMMON_GROUND.md](docs/COMMON_GROUND.md)** - Context engineering with `/common-ground`
-- **[docs/WORKFLOW_COMMANDS.md](docs/WORKFLOW_COMMANDS.md)** - Project workflow commands guide
-- **[docs/ATLASSIAN_MCP_SETUP.md](docs/ATLASSIAN_MCP_SETUP.md)** - Atlassian MCP server setup
+- **[CLAUDE.md](CLAUDE.md)** - Project configuration and skill authorship standards
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guidelines for contributing
 - **skills/*/SKILL.md** - Individual skill documentation
 - **skills/*/references/** - Deep-dive reference materials
 
+---
+
+## Maintenance
+
+### Update Documentation
+
+When adding/removing skills or changing versions:
+
+```bash
+# Update version in version.json, then:
+python scripts/update-docs.py
+
+# Validate all skills
+python scripts/validate-skills.py
+```
+
+### Validate Skills
+
+Before committing changes:
+
+```bash
+# Run full validation
+python scripts/validate-skills.py
+
+# Validate specific skill
+python scripts/validate-skills.py --skill fastapi-expert
+
+# Check YAML only
+python scripts/validate-skills.py --check yaml
+```
+
+---
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+This is a personal skill collection, but contributions are welcome!
 
 ### Adding a New Skill
 
@@ -368,70 +326,88 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
    mkdir -p skills/my-skill/references
    ```
 
-2. Create lean SKILL.md with routing table:
-   ```markdown
+2. Create lean SKILL.md with YAML frontmatter:
+   ```yaml
    ---
-   name: My Skill
-   description: Brief description with trigger keywords
+   name: my-skill
+   description: Use when [triggering conditions]
    triggers:
      - keyword1
      - keyword2
+   role: specialist|expert|architect
+   scope: implementation|review|design
+   output-format: code|document|report
    ---
-
-   # My Skill
-
-   ## Reference Guide
-   | Topic | Reference | Load When |
-   |-------|-----------|-----------|
-   | Topic 1 | `references/topic1.md` | Context |
    ```
 
-3. Create reference files (4-6 recommended)
+3. Create reference files (100-600 lines each)
 
-4. Update plugin.json
+4. Update version.json and run:
+   ```bash
+   python scripts/update-docs.py
+   python scripts/validate-skills.py
+   ```
 
-5. Test locally and submit PR
+5. Test locally and commit
 
-### Adding Reference Files
+See **[CLAUDE.md](CLAUDE.md)** for detailed authorship standards.
 
-Keep references focused (200-400 lines each):
-- Single topic per file
-- Code examples included
-- Clear when-to-use guidance
-- Cross-references where helpful
+---
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for full version history and release notes.
+See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
+
+---
 
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
 
-## Support
-
-- **Issues:** [GitHub Issues](https://github.com/jeffallan/claude-skills/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/jeffallan/claude-skills/discussions)
-- **Repository:** [github.com/jeffallan/claude-skills](https://github.com/jeffallan/claude-skills)
-
-## Author
-
-Built by **[jeffallan](https://jeffallan.github.io)** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16" height="16" alt="LinkedIn"/>](https://www.linkedin.com/in/jeff-smolinski/)
-
-**Principal Consultant** at **[Synergetic Solutions](https://synergetic.solutions)** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16" height="16" alt="LinkedIn"/>](https://www.linkedin.com/company/synergetic-holdings)
-
-Fullstack engineering, security compliance, and technical due diligence for teams leveraging AI.
-
-**Need help operationalizing AI workflows?** [Let's talk](https://synergetic.solutions/#contact)
-
-## :clap: Thanks For Your support 
-
-[![Stargazers repo roster for @Jeffallan/claude-skills](https://reporoster.com/stars/Jeffallan/claude-skills)](https://github.com/Jeffallan/claude-skills/stargazers)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Jeffallan/claude-skills&type=date&legend=top-left)](https://www.star-history.com/#Jeffallan/claude-skills&type=date&legend=top-left)
+Original template: [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills)
 
 ---
 
-**Built for Claude Code** | **<!-- WORKFLOW_COUNT -->9<!-- /WORKFLOW_COUNT --> Workflows** | **<!-- REFERENCE_COUNT -->356<!-- /REFERENCE_COUNT --> Reference Files** | **<!-- SKILL_COUNT -->65<!-- /SKILL_COUNT --> Skills** 
+## Skill Sources & Attribution
+
+Some skills in this collection were created by other contributors in the community:
+
+### Community-Contributed Skills
+
+- **[stata-accounting-research](skills/stata-accounting-research/)**
+  - Original: [jusi-aalto/stata-accounting-research](https://github.com/jusi-aalto/stata-accounting-research)
+  - Author: @jusi-aalto
+  - Description: STATA code patterns from 126+ published JAR papers
+
+- **[n8n-skills](skills/n8n-skills/)**
+  - Original: [haunchen/n8n-skills](https://github.com/haunchen/n8n-skills)
+  - Author: Frank Chen (@haunchen)
+  - Description: n8n workflow automation knowledge base
+  - License: MIT
+
+- **[matplotlib](skills/matplotlib/)** + **[scientific-visualization](skills/scientific-visualization/)**
+  - Original: [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+  - Author: K-Dense Inc.
+  - Description: Scientific plotting and publication-ready figures
+  - License: MIT
+
+### Related Resources
+
+- **[K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)** - Additional scientific research skills (matplotlib, scientific-visualization source)
+- **[quant-sentiment-ai/claude-equity-research](https://github.com/quant-sentiment-ai/claude-equity-research)** - Equity research analysis skills
+
+**Check for Updates**: Visit the original repositories above to get the latest versions and contribute back improvements.
+
+---
+
+## About
+
+**Personal skill collection** for Python development, data analysis, econometric research, and AI integration.
+
+Built on the [Agent Skills](https://agentskills.io/specification) specification.
+
+Originally forked from [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills).
+
+---
+
+**Built for Claude Code** | **<!-- WORKFLOW_COUNT -->9<!-- /WORKFLOW_COUNT --> Workflows** | **<!-- REFERENCE_COUNT -->85<!-- /REFERENCE_COUNT --> Reference Files** | **<!-- SKILL_COUNT -->16<!-- /SKILL_COUNT --> Skills**

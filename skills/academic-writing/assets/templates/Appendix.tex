@@ -1,0 +1,70 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Variable Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% INSTRUCTIONS: Replace placeholder variable names with your actual variables:
+%%   - [OUTCOME_VAR_1], [OUTCOME_VAR_2], etc. → Your dependent variables
+%%   - [TREATMENT_VAR], [MODERATOR_VAR], etc. → Your independent variables
+%%   - [CONTROL_VAR_1], [CONTROL_VAR_2], etc. → Your control variables
+%%
+%% Keep the longtable structure and formatting. Structure definitions clearly with:
+%%   1. Variable name (left column)
+%%   2. Definition + calculation + source (right column)
+%%
+%% For continuous variables: Include range, calculation method, and source
+%% For indicator variables: Explain threshold and coding (0/1)
+%% For lagged variables: Specify lag structure
+%%
+
+\footnotesize  % Sets a smaller font size for the table
+\renewcommand{\arraystretch}{1.5} % Adjusts row spacing for readability within multi-line definitions
+\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{11cm}}
+
+    \caption*{\\Variable Definitions} \label{tab:variable_description} \\
+    \toprule
+    \textbf{Variable} & \textbf{Definition and Source} \\
+    \midrule
+\endfirsthead
+
+    \caption*{\\Variable Definitions (Continued)} \\
+    \toprule
+    \textbf{Variable} & \textbf{Definition and Source} \\
+    \midrule
+\endhead
+
+    \midrule
+    \multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+    \bottomrule
+    \multicolumn{2}{p{\dimexpr\textwidth-2\tabcolsep\relax}} % Adjusted width for notes
+    {\textit{Notes:} All firm-level variables are measured [FREQUENCY] unless otherwise specified. Lagged versions (denoted as ``Lag 1'') use the previous period's value. Sample period is [START_YEAR]-[END_YEAR]. All continuous variables are winsorized at the 1st and 99th percentiles to reduce the influence of outliers. Additional variable-specific notes: [INSERT_NOTES].} \\
+\endlastfoot
+
+    \multicolumn{2}{l}{\textbf{Main Dependent Variables}} \\
+    \midrule
+
+    [OUTCOME_VAR_1] & [Description of how variable is calculated or measured. Include formula if applicable. Example: ``Annualized standard deviation of residuals from [specific model]. Source: [data source].''] \\[1.5ex]
+
+    [OUTCOME_VAR_2] & [Description of measurement methodology and source. Example: ``Percentage change from beginning to end of period. Source: [data source].''] \\[1.5ex]
+
+    \midrule
+    \multicolumn{2}{l}{\textbf{Main Independent Variables}} \\
+    \midrule
+
+    [TREATMENT_VAR] & [Description of treatment variable, including measurement scale, threshold for indicator variables if applicable, and source. Example: ``Indicator variable equal to 1 if [condition], 0 otherwise. Source: [data source].''] \\[1.5ex]
+
+    [MODERATOR_VAR] & [Description of moderator or interaction variable. Include calculation and source. Example: ``Continuous measure ranging from [min] to [max]. Calculated as [formula]. Source: [data source].''] \\[1.5ex]
+
+    \midrule
+    \multicolumn{2}{l}{\textbf{Control Variables}} \\
+    \midrule
+
+    [CONTROL_VAR_1] & [Description of control variable. Include measurement and source. Example: ``Natural logarithm of [metric]. Source: [data source].''] \\[1.5ex]
+
+    [CONTROL_VAR_2] & [Description of control variable. Include calculation and source. Example: ``Ratio of [numerator] to [denominator]. Source: [data source].''] \\[1.5ex]
+
+    [CONTROL_VAR_3] & [Description of control variable. Include measurement and source. Example: ``Number of years since [event]. Source: [data source].''] \\
+
+\end{longtable}

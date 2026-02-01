@@ -1,0 +1,248 @@
+\setcounter{figure}{0}
+
+% ========================================================================
+% FIGURES SECTION - TEMPLATE WITH EXAMPLES
+% ========================================================================
+% This section contains examples of different figure layouts commonly used
+% in academic papers. Follow these templates for consistent formatting:
+%
+% - Single Figure (portrait orientation)
+% - Multi-Panel Figure (landscape orientation with subfloat)
+% - Wide Figure (full-width landscape)
+%
+% See commented examples below for additional formatting options.
+% ========================================================================
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%  FIGURE 1 - MULTI-PANEL LANDSCAPE  %%%%%%%%%%%%%%%
+%%%%%%%%%%  Example of 4-6 panel figure in landscape mode  %%
+
+\begin{landscape}
+
+\begin{figure}[ht!]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\caption{\\[Descriptive Figure Title]}
+\parbox{\linewidth}{\footnotesize
+This figure illustrates [description of what the figure shows].
+Panels present [detail about panels A, B, C, etc.].
+The [color/pattern/style] indicates [what it represents].
+\\}
+\label{fig:example_multipanel}    %% LABEL FIGURE FOR REFERENCING IN THE TEXT
+\vspace{.5cm}
+
+\subfloat[Panel A: Description]{
+  \includegraphics[width=7cm]{Results/Figures/example_figure_1_panelA.pdf}
+}
+\subfloat[Panel B: Description]{
+  \includegraphics[width=7cm]{Results/Figures/example_figure_1_panelB.pdf}
+}
+
+\vspace{1cm}
+\subfloat[Panel C: Description]{
+  \includegraphics[width=7cm]{Results/Figures/example_figure_1_panelC.pdf}
+}
+\subfloat[Panel D: Description]{
+  \includegraphics[width=7cm]{Results/Figures/example_figure_1_panelD.pdf}
+}
+\subfloat[Panel E: Description]{
+  \includegraphics[width=7cm]{Results/Figures/example_figure_1_panelE.pdf}
+}
+\end{figure}
+
+\end{landscape}
+
+\clearpage
+
+
+
+
+
+%%%%%%%%%%  FIGURE 2 - SINGLE FIGURE (PORTRAIT)  %%%%%%%%%%%%%
+%%%%%%%%%%  Example of standard single figure in portrait   %%
+
+\begin{figure}[htbp]
+\centering
+\caption{\\[Descriptive Figure Title]}
+\parbox{\linewidth}{\footnotesize
+This figure shows [description of what the figure displays].
+[Additional details about interpretation, methodology, or key findings].
+}
+\label{fig:example_single}    %% LABEL FIGURE FOR REFERENCING IN THE TEXT
+\vspace{.5cm}
+\includegraphics[width=0.8\textwidth]{Results/Figures/example_figure_2.pdf}
+\end{figure}
+
+\clearpage
+
+
+
+%%%%%%%%%%  FIGURE 3 - WIDE LANDSCAPE  %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%  Example of full-width landscape figure          %%
+
+\begin{landscape}
+\begin{figure}[ht!]
+\centering
+\caption{\\[Descriptive Figure Title for Wide Figure]}
+\parbox{\linewidth}{\footnotesize
+This figure presents [description of wide landscape figure].
+The layout allows [explain advantage of landscape format].
+[Additional interpretation details].
+}
+\label{fig:example_landscape_wide}
+\vspace{.5cm}
+\includegraphics[width=0.95\textwidth]{Results/Figures/example_figure_3_landscape.pdf}
+\end{figure}
+\end{landscape}
+
+\clearpage
+
+
+% ========================================================================
+% COMMENTED EXAMPLES - ALTERNATIVE FORMATTING OPTIONS
+% ========================================================================
+% The examples below show alternative figure layouts and formatting
+% strategies that can be used for different types of figures.
+% Uncomment and adapt as needed for your specific use case.
+% ========================================================================
+
+\begin{comment}
+
+%%%%%%%%%%  EXAMPLE 1 - TIME SERIES FIGURE  %%%%%%%%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\caption{\\[Time Series Title: Variable by Year]}
+\parbox{\linewidth}{\footnotesize
+This figure reports [variable description] by year from [start year] to [end year].
+[Description of trends, patterns, or key observations].
+}
+\label{fig:example_timeseries}
+\vspace{.1cm}
+\includegraphics[width=0.85\textwidth]{Results/Figures/example_timeseries.pdf}
+\end{figure}
+\clearpage
+
+
+%%%%%%%%%%  EXAMPLE 2 - 3x3 MULTI-PANEL  %%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\begin{figure}[ht!]
+\centering
+\caption{\\[Multi-Panel Comparison Title]}
+\parbox{\linewidth}{\footnotesize
+Panels A-I show [what each panel contains].
+[Description of comparison across panels].
+}
+\label{fig:example_3x3_panels}
+\vspace{.5cm}
+
+\subfloat[Panel A]{
+  \includegraphics[width=5cm]{Results/Figures/panel_a.pdf}
+}
+\subfloat[Panel B]{
+  \includegraphics[width=5cm]{Results/Figures/panel_b.pdf}
+}
+\subfloat[Panel C]{
+  \includegraphics[width=5cm]{Results/Figures/panel_c.pdf}
+}
+
+\vspace{0.8cm}
+
+\subfloat[Panel D]{
+  \includegraphics[width=5cm]{Results/Figures/panel_d.pdf}
+}
+\subfloat[Panel E]{
+  \includegraphics[width=5cm]{Results/Figures/panel_e.pdf}
+}
+\subfloat[Panel F]{
+  \includegraphics[width=5cm]{Results/Figures/panel_f.pdf}
+}
+
+\vspace{0.8cm}
+
+\subfloat[Panel G]{
+  \includegraphics[width=5cm]{Results/Figures/panel_g.pdf}
+}
+\subfloat[Panel H]{
+  \includegraphics[width=5cm]{Results/Figures/panel_h.pdf}
+}
+\subfloat[Panel I]{
+  \includegraphics[width=5cm]{Results/Figures/panel_i.pdf}
+}
+
+\end{figure}
+\end{landscape}
+\clearpage
+
+
+%%%%%%%%%%  EXAMPLE 3 - SIDE-BY-SIDE COMPARISON  %%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\caption{\\[Comparison Title]}
+\parbox{\linewidth}{\footnotesize
+Panel A shows [left panel description].
+Panel B shows [right panel description].
+[Comparative interpretation].
+}
+\label{fig:example_sidebyside}
+\vspace{.5cm}
+
+\subfloat[Panel A: Description]{
+  \includegraphics[width=0.45\textwidth]{Results/Figures/example_left.pdf}
+}
+\hfill
+\subfloat[Panel B: Description]{
+  \includegraphics[width=0.45\textwidth]{Results/Figures/example_right.pdf}
+}
+
+\end{figure}
+\clearpage
+
+
+%%%%%%%%%%  EXAMPLE 4 - EVENT STUDY FIGURE  %%%%%%%%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\caption{\\[Event Study Title: Dynamic Treatment Effects]}
+\parbox{\linewidth}{\footnotesize
+This figure presents dynamic treatment effects relative to the event window.
+The [color/shading] represents [what it indicates].
+Shaded region shows [confidence interval/standard error range].
+}
+\label{fig:example_event_study}
+\vspace{.5cm}
+\includegraphics[width=0.8\textwidth]{Results/Figures/example_event_study.pdf}
+\end{figure}
+\clearpage
+
+
+%%%%%%%%%%  EXAMPLE 5 - HEATMAP FIGURE  %%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\begin{figure}[ht!]
+\centering
+\caption{\\[Heatmap Title: Variable Distribution Across Dimensions]}
+\parbox{\linewidth}{\footnotesize
+This figure presents a heatmap showing [variable description] across [dimensions].
+Color intensity indicates [magnitude/direction].
+Rows represent [first dimension], columns represent [second dimension].
+}
+\label{fig:example_heatmap}
+\vspace{.5cm}
+\includegraphics[width=0.95\textwidth]{Results/Figures/example_heatmap.pdf}
+\end{figure}
+\end{landscape}
+\clearpage
+
+
+
+\end{comment}
+
+%%%%%%%%%%  END OF FIGURES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

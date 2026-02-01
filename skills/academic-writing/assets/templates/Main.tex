@@ -1,0 +1,639 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Created by [Your Name]: [Date]
+%% Academic Research Template - Based on Finance/Economics Standards
+%% Compatible with Journal of Finance, JFE, Real Estate Economics, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+% ------------------------------%
+%          PACKAGES             %
+% ------------------------------%
+
+% Encoding and Fonts
+\usepackage[utf8]{inputenc}      % UTF-8 encoding
+\usepackage[T1]{fontenc}         % Output font encoding
+\usepackage{lmodern}             % Latin Modern font (enhanced version of Computer Modern)
+\usepackage{longtable} % Required for tables that span multiple pages.
+\usepackage{booktabs}  % For professional quality rules (\toprule, \midrule, \bottomrule).
+\usepackage{array}     % For custom column specifications (e.g., ragged-right p-columns).
+
+% Page Layout
+\usepackage{geometry}            % Page dimensions and margins
+\geometry{
+    letterpaper,
+    portrait,
+    left=1.1in,
+    right=1.1in,
+    top=1in,
+    bottom=1in
+}
+
+% Line Spacing
+\usepackage{setspace}
+\onehalfspacing                   % Set line spacing to 1.5
+
+% Mathematics
+\usepackage{amsmath, amssymb, amsthm}    % Math symbols and environments
+
+% Figures and Tables
+\usepackage{graphicx}            % Include images
+\usepackage{caption}
+\captionsetup{justification=centering, format=plain, width=\linewidth}
+\usepackage{subcaption}          % Subfigures
+\usepackage{booktabs}            % Professional-quality tables
+\usepackage{multirow}            % Multi-row cells in tables
+\usepackage{array}               % Extended table features
+\usepackage{longtable}           % Tables that span multiple pages
+\usepackage{pdflscape}           % Landscape pages
+\usepackage{adjustbox}           % Adjust box size
+\usepackage{siunitx}             % Align numbers in tables
+
+% Bibliography and References
+\usepackage[round, longnamesfirst, sort&compress]{natbib}   % Citation management
+\bibliographystyle{References/jfe}                          % Use JFE bibliography style
+%\bibliographystyle{References/jf}                          % Alternative: Journal of Finance style
+
+% Hyperlinks
+\usepackage{hyperref}            % Create hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Colors
+\usepackage[dvipsnames]{xcolor}  % Extended colors
+
+% Headers and Footers
+\usepackage{fancyhdr}
+% Set the page style to 'plain' to have page numbers at the bottom center
+\pagestyle{plain}
+\fancyhf{}                        % Clear all header and footer fields
+%\lhead{[Author's Last Name]}      % Removed author name from header
+\rhead{\thepage}                  % Page number on the right
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+%\renewcommand{\footrulewidth}{0pt} % Remove footer line (already removed by \fancyhf{})
+
+% Section Formatting
+\usepackage{titlesec}
+\titleformat*{\section}{\centering\large\normalfont\scshape}
+\titleformat*{\subsection}{\normalfont\itshape}
+\titleformat*{\subsubsection}{\normalfont\itshape}
+\titlespacing*{\section}{0pt}{1.0\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.75\baselineskip}{0.5\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{0.5\baselineskip}{0.25\baselineskip}
+
+% Indent first paragraph
+\usepackage{indentfirst}
+
+% Miscellaneous
+\usepackage{lipsum}              % Dummy text
+\usepackage{csquotes}            % Context-sensitive quotation facilities
+\usepackage{enumerate}           % Customizable enumerate environment
+\usepackage{comment}             % Comment blocks
+\usepackage{datetime} % Ensure this package is included
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR} % Define Month Year format
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Adjust bibliography spacing
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+% Graphics Path
+\graphicspath{{../Results/Figures/}}        % Set the graphics path for images from Results directory
+
+% ------------------------------%
+%          COMMANDS             %
+% ------------------------------%
+
+% Define custom font sizes
+\newcommand{\tablefontsize}{\fontsize{9}{11}\selectfont}
+\newcommand{\notesize}{\fontsize{9}{11}\selectfont}
+\newcommand{\llarge}{\fontsize{13}{15.5}\selectfont}
+
+% Handy shortcut macros
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\nothing}[1]{}
+
+% Hyphenation penalty
+\hyphenpenalty=9500
+
+% ------------------------------%
+%       DOCUMENT START          %
+% ------------------------------%
+
+\begin{document}
+
+% ------------------------------%
+%          TITLE PAGE           %
+% ------------------------------%
+% TEMPLATE GUIDANCE:
+% Replace with your research title, authors, and affiliations
+% Follow journal guidelines for title formatting and author information
+% Keep title concise and descriptive (typically 10-15 words)
+
+\title{\large \uppercase{[Your Research Title Here]} }
+\author{
+\textsc{[Author 1 Name]} \thanks{[Institution 1]. Email: \href{mailto:[email1@institution.edu]}{\textcolor{blue}{[email1@institution.edu]}}} 
+\and
+\textsc{[Author 2 Name]} \thanks{[Institution 2]. Email: \href{mailto:[email2@institution.edu]}{\textcolor{blue}{[email2@institution.edu]}}}
+\and
+\textsc{[Author 3 Name]} \thanks{[Institution 3]. Email: \href{mailto:[email3@institution.edu]}{\textcolor{blue}{[email3@institution.edu]}}}
+}
+% \date{\vspace{1cm} \today}
+\date{\vspace{1cm} \monthyeardate\today} % Displays Month Year only
+\maketitle
+\begin{abstract}
+% TEMPLATE GUIDANCE FOR ABSTRACT:
+% Structure: (1) Research question and motivation, (2) Methodology and identification strategy,
+%            (3) Data sources and measures, (4) Key quantitative findings, (5) Contribution to literature
+% Length: 150-200 words (check target journal requirements)
+% Style: Write in third person, present tense for methods, past tense for findings
+% AVOID: Citations, mathematical equations, undefined abbreviations, overly technical language
+% DO INCLUDE: Specific quantitative results with magnitudes (e.g., "increases by 15%")
+
+\noindent
+This paper examines [RESEARCH QUESTION/PHENOMENON].
+We hypothesize that [TREATMENT/INTERVENTION] facilitates [MECHANISM], which affects [OUTCOME VARIABLE].
+Using [IDENTIFICATION STRATEGY] and exploiting [SOURCE OF EXOGENOUS VARIATION], we [DESCRIBE EMPIRICAL APPROACH] across [TIME PERIOD AND SAMPLE].
+Our analysis incorporates [KEY DATA SOURCES] including [DATA 1] and [DATA 2], combined with [KEY MEASURES/METHODOLOGY].
+We find that [MAIN RESULT WITH MAGNITUDE AND SIGNIFICANCE].
+These findings contribute to our understanding of [LITERATURE/TOPIC AREA] and have implications for [POLICY/PRACTICE/THEORY].
+Results are robust to [ALTERNATIVE SPECIFICATION/SAMPLE].
+
+\vspace{1em}
+
+\noindent \textbf{Keywords:} \textit{[Keyword 1], [Keyword 2], [Keyword 3], [Keyword 4]} \\
+\noindent \textbf{JEL Classification:} [G14]; [G12]; [G11]; [G40]; [D83]
+
+\end{abstract}
+\thispagestyle{empty}    % Remove header/footer from title page
+\clearpage
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%                    TEMPLATE CUSTOMIZATION GUIDE                    %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% BEFORE YOU START WRITING: Read this guide to understand how to customize
+% this template for your research project.
+%
+% STEP 1: CHOOSE YOUR PAPER STRUCTURE
+% ────────────────────────────────────
+% This template provides TWO organizational structures:
+%
+% STRUCTURE A (Recommended for tightly integrated work):
+%   - Hypotheses, Methods, and Data Sources [ACTIVE - Lines 186-306]
+%   - Results, Figures, Appendix, Internet Appendix
+%
+% STRUCTURE B (Classical academic organization):
+%   - Introduction, Literature Review, Data and Methodology, Results,
+%     Discussion, Conclusion, Appendix, Internet Appendix
+%   - Uncomment sections in the comment block starting at line 308
+%
+% If using STRUCTURE B:
+%   1. Delete or comment out "Hypotheses, Methods, and Data Sources"
+%   2. Uncomment the Introduction through Conclusion sections
+%   3. Customize the content placeholders
+%   4. Keep the Results/Figures/Appendix/Internet Appendix order at the end
+%
+% STEP 2: CUSTOMIZE PLACEHOLDERS
+% ────────────────────────────────
+% Replace all [PLACEHOLDER] variables throughout the document:
+%
+% Title Page:
+%   [Your Research Title Here]
+%   [Author 1/2/3 Name], [Institution], [email]
+%
+% Abstract:
+%   [RESEARCH QUESTION], [TREATMENT], [MECHANISM], [OUTCOME VARIABLE],
+%   [IDENTIFICATION STRATEGY], [DATA SOURCES], [KEY RESULT], [CONTRIBUTION]
+%
+% Methodology:
+%   [TREATMENT VARIABLE], [OUTCOME VARIABLE], [CAUSAL MECHANISM],
+%   [SOURCE OF EXOGENOUS VARIATION], [CLUSTERING LEVEL], etc.
+%
+% Keywords & JEL Classification:
+%   [Keywords 1-4] and [JEL Codes]
+%
+% STEP 3: PREPARE YOUR RESULTS
+% ────────────────────────────
+% The template automatically imports results from section files:
+%   - Writing/sections/Results.tex     (main empirical results)
+%   - Writing/sections/Figures.tex     (figures and plots)
+%   - Writing/sections/Appendix.tex    (technical appendix)
+%   - Writing/sections/Internet_Results.tex (online appendix)
+%
+% These files use \input{../Results/Tables/[TABLE_NAME].tex} to include
+% your auto-generated tables from the analysis pipeline.
+%
+% STEP 4: COMPILE AND TEST
+% ────────────────────────
+% After customizing, compile the document:
+%   Windows PowerShell: .\Writing\compile_latex.ps1
+%   Linux/Mac Bash:     ./Writing/compile_latex.sh
+%
+% The compilation script handles:
+%   - Citation validation
+%   - LaTeX compilation (4-step process)
+%   - Auxiliary file cleanup
+%
+% STEP 5: VERIFY INTEGRATION
+% ───────────────────────────
+% Make sure all \input{} commands can find files:
+%   - Results/Tables/ contains your .tex table files
+%   - Results/Figures/ contains your .pdf figure files
+%   - References/references.bib contains your citations
+%
+% If compilation fails, check:
+%   1. File paths in \input{} and \includegraphics{} commands
+%   2. Bibliography entry exists for all cited works
+%   3. No special characters or unescaped LaTeX in titles
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% Reset page counter and formatting after title page
+\setcounter{page}{1}
+\normalsize
+\setstretch{1.5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hypotheses, Methods, and Data Sources}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE FOR METHODOLOGY SECTION:
+% This section introduces your research design and key variables.
+% It should answer these questions:
+% (1) What is your research question and hypothesis?
+% (2) What identification strategy do you use? What is your source of variation?
+% (3) What data do you use? How do you measure key variables?
+% (4) What is your econometric specification?
+%
+% STRUCTURE: Research question → Hypothesis → Data → Identification strategy → Econometric model
+%
+% ALTERNATIVE STRUCTURE: If you prefer traditional sections (Introduction, Literature Review, Data, Methodology),
+% see the commented-out sections below this subsection for an alternative template.
+% You can uncomment those sections and customize them instead.
+
+\subsection{Research Question and Hypothesis}
+% TEMPLATE GUIDANCE:
+% 1. State your research question clearly and concisely
+% 2. Provide theoretical or empirical motivation
+% 3. Explain the proposed causal mechanism
+% 4. Preview why this matters (contribution)
+
+This paper investigates whether [RESEARCH QUESTION/PHENOMENON].
+We hypothesize that [TREATMENT/INTERVENTION] facilitates [CAUSAL MECHANISM], which affects [OUTCOME VARIABLE].
+Specifically, we posit the following channel: [TREATMENT] → [MECHANISM] → [INTERMEDIATE OUTCOME] → [FINAL OUTCOME].
+This research question matters because [MOTIVATION/IMPORTANCE FOR THEORY/PRACTICE].
+
+\subsection{Data Sources and Sample Construction}
+% TEMPLATE GUIDANCE:
+% 1. Identify all data sources and their coverage
+% 2. Describe sample selection criteria clearly
+% 3. Note any sample restrictions and their justification
+% 4. Reference Table 1 (summary statistics) if available
+
+Our analysis uses [KEY DATA SOURCES], including [DATA 1], [DATA 2], and [DATA 3].
+[DATA 1] provides [coverage/variables], covering [time period] with [sample size] observations.
+We restrict our analysis to [SAMPLE RESTRICTION 1] and [SAMPLE RESTRICTION 2], which yields a final sample of [N OBSERVATIONS, SAMPLE PERIOD].
+Summary statistics are presented in Table~\ref{tab:summary_statistics}.
+
+\subsection{Variable Definitions and Measurement}
+% TEMPLATE GUIDANCE:
+% 1. Define dependent variables clearly
+% 2. Define independent/treatment variables
+% 3. Explain construction of key variables
+% 4. Justify measurement choices by reference to literature
+
+\subsubsection{Dependent Variable: [OUTCOME VARIABLE NAME]}
+Our primary dependent variable is [OUTCOME VARIABLE], measured as [MEASUREMENT APPROACH].
+Following [KEY REFERENCE PAPERS], we compute [SPECIFIC CALCULATION/FORMULA].
+This measure captures [INTERPRETATION/ECONOMIC MEANING].
+
+\subsubsection{Treatment/Independent Variable: [TREATMENT VARIABLE NAME]}
+The main independent variable is [TREATMENT VARIABLE], measured as [MEASUREMENT APPROACH].
+We employ [TREATMENT VARIATION SOURCE] to identify the causal effect of [TREATMENT].
+Specifically, [DESCRIPTION OF VARIATION/SOURCE OF EXOGENOUS VARIATION].
+
+\subsubsection{Control Variables}
+The vector $X_{t-1}$ includes lagged control variables: [CONTROL 1] ([DEFINITION/JUSTIFICATION]), [CONTROL 2] ([DEFINITION/JUSTIFICATION]), [CONTROL 3], and [CONTROL 4].
+We lag control variables by one period to mitigate simultaneity concerns.
+
+\subsection{Identification Strategy}
+% TEMPLATE GUIDANCE:
+% 1. Clearly state your identification assumption
+% 2. Explain the source of exogenous variation
+% 3. Discuss potential confounds and how you address them
+% 4. Describe any first-stage or validity tests
+
+The primary challenge to identifying the causal effect of [TREATMENT] on [OUTCOME] is [ENDOGENEITY CONCERN].
+We address this through [IDENTIFICATION STRATEGY], exploiting [SOURCE OF EXOGENOUS VARIATION].
+Intuitively, [EXPLANATION OF WHY VARIATION IS EXOGENOUS].
+
+[VALIDITY TESTS OR FIRST STAGE EVIDENCE]: We validate this approach by documenting [SUPPORTING EVIDENCE].
+This establishes that [TREATMENT] varies significantly across our sample due to [SOURCE OF VARIATION].
+
+\subsection{Econometric Specification}
+% TEMPLATE GUIDANCE:
+% 1. Present main specification clearly with equation
+% 2. Define all variables, subscripts, and notation
+% 3. Explain fixed effects and their purpose
+% 4. Justify standard error clustering choices
+% 5. Note any alternative specifications
+
+Our baseline specification is:
+\begin{equation}
+\label{eq:main_spec}
+[OUTCOME]_{i,t} = \beta_{0} + \beta_{1}[TREATMENT]_{i,t} + X'_{i,t-1}\gamma + \delta_{[UNIT]} + \tau_{[TIME]} + \epsilon_{i,t}
+\end{equation}
+
+where $[OUTCOME]_{i,t}$ is the dependent variable for unit [UNIT TYPE] $i$ in period $t$;
+$[TREATMENT]_{i,t}$ is the treatment variable;
+$X'_{i,t-1}$ is a vector of lagged control variables;
+$\delta_{[UNIT]}$ represents [UNIT]-level fixed effects (absorbing [UNIT-LEVEL VARIATION]);
+$\tau_{[TIME]}$ represents time fixed effects (absorbing [TIME-LEVEL VARIATION]);
+and $\epsilon_{i,t}$ is the error term.
+
+The coefficient of interest is $\beta_{1}$, which captures [INTERPRETATION OF COEFFICIENT].
+Standard errors are clustered at the [CLUSTERING LEVEL] to account for [CORRELATION STRUCTURE].
+
+\subsection{Theoretical Framework}
+% TEMPLATE GUIDANCE:
+% 1. Connect empirical work to theory
+% 2. Explain predicted effects under alternative scenarios
+% 3. Discuss competing mechanisms or hypotheses
+% 4. Provide intuition for expected results and interpretation
+
+Our theoretical framework predicts [NUMBER] possible scenarios:
+
+\begin{enumerate}
+
+\item \textit{Hypothesis 1 - [PRIMARY MECHANISM]:} If [TREATMENT] increases through the mechanism of [MECHANISM 1], then we expect [OUTCOME] to [DIRECTION] by approximately [PREDICTED MAGNITUDE].
+This would support the theory that [THEORETICAL INTERPRETATION].
+
+\item \textit{Hypothesis 2 - [ALTERNATIVE MECHANISM]:} If instead [MECHANISM 2] dominates, we would expect [ALTERNATIVE OUTCOME DIRECTION].
+This scenario would suggest [ALTERNATIVE THEORETICAL INTERPRETATION].
+
+\end{enumerate}
+
+By examining [MECHANISM TESTS/HETEROGENEOUS EFFECTS], we can distinguish between these scenarios and provide evidence on which mechanism is operative.
+
+\begin{comment}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% ALTERNATIVE SECTION STRUCTURE (Comment out "Hypotheses, Methods, Data"
+% and uncomment sections below if you prefer traditional academic organization)
+%
+% WHEN TO USE: If your research follows a classical paper structure with
+% separate Introduction, Literature Review, Data, Methodology, and Results sections,
+% uncomment the sections below and customize them.
+%
+% HOW TO USE:
+% 1. Keep \section{Hypotheses, Methods, and Data Sources} (lines 186-306)
+%    OR delete it and uncomment Introduction through Conclusion below
+% 2. Uncomment the sections that match your paper structure
+% 3. Customize placeholders to your research context
+% 4. Keep the Results → Figures → Appendix → Internet Appendix order at the end
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE FOR INTRODUCTION:
+% 1. Open with a compelling motivating example, stylized fact, or puzzle
+% 2. State your research question clearly and concisely
+% 3. Explain why the question matters (motivation)
+% 4. Preview your identification strategy (high level)
+% 5. Summarize key findings and economic magnitudes
+% 6. Highlight main contributions (3-4 bullet points)
+% 7. Provide a roadmap of the paper
+%
+% Typical structure: Motivation (2-3 paragraphs) → Research question → Identification approach → Findings → Contributions → Roadmap
+
+[Your introduction content here. Begin with motivation and a compelling opening, state your research question clearly, preview your methodology and identification strategy, highlight key contributions, and provide a roadmap of the paper structure.]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Literature Review}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE FOR LITERATURE REVIEW:
+% 1. Organize by THEMES, not chronologically
+% 2. Synthesize related papers into coherent narrative
+% 3. Identify specific gaps your research addresses
+% 4. Position your contribution within the literature landscape
+% 5. Connect themes to your research question and hypotheses
+%
+% Typical structure: Broad theme 1 (2-3 paragraphs) → Theme 2 → Theme 3 → Identified gap → Your contribution
+
+[Review relevant literature. Organize thematically around major research streams, identify specific gaps that your paper addresses, and position your research as a contribution to these literatures.]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data and Methodology}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE:
+% This section can supplement or replace "Hypotheses, Methods, and Data Sources"
+% Include: data sources, sample construction, variable definitions, identification strategy,
+% econometric specifications, and justifications for methodological choices
+
+[Describe comprehensive data sources, sample selection procedures, variable construction, and analytical techniques.]
+
+\subsection{Data Sources and Sample Construction}
+% TEMPLATE GUIDANCE:
+% 1. Document data sources comprehensively
+% 2. Specify time periods and coverage
+% 3. Describe sample selection criteria
+% 4. Note any data quality issues or missing data treatment
+% 5. Reference Table 1 for summary statistics
+
+[Detail the data sources, time periods covered, collection methods, sample selection, and any data cleaning or preprocessing steps.]
+
+\subsection{Variable Definitions and Measurement}
+% TEMPLATE GUIDANCE:
+% 1. Define dependent variable clearly
+% 2. Define independent and treatment variables
+% 3. Explain construction of each variable
+% 4. Justify measurement choices by reference to literature
+% 5. Report distributional properties when relevant
+
+[Explain how key variables are constructed, with specific formulas or methodologies.
+Detailed variable definitions and extended discussion can be found in Appendix~\ref{appendix:variables}.]
+
+\subsection{Identification Strategy}
+% TEMPLATE GUIDANCE:
+% 1. Clearly state the identification challenge
+% 2. Explain your solution and source of exogenous variation
+% 3. Discuss validity assumptions
+% 4. Describe any first-stage tests or falsification tests
+
+[Specify your identification strategy, explaining how you address potential endogeneity or confounding. Describe the source of exogenous variation and any tests of validity.]
+
+\subsection{Econometric Specifications}
+% TEMPLATE GUIDANCE:
+% 1. Present main specification clearly with equation
+% 2. Define all variables and notation
+% 3. Explain fixed effects and their role
+% 4. Justify standard error clustering
+% 5. Note alternative specifications
+
+[Specify the econometric models or analytical frameworks employed. Present main specification with equation(s) and explain all notation, fixed effects, and clustering choices.]
+
+Example specification:
+\begin{equation}
+\label{eq:model}
+    Y_{it} = \alpha + \beta X_{it} + \gamma Z_{it} + \delta_i + \tau_t + \varepsilon_{it}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Empirical Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE:
+% Structure results logically: descriptive statistics → main results → robustness → mechanisms
+% Use clear table and figure captions with complete information
+% Interpret economic significance AND statistical significance
+% Reference tables and figures precisely in text
+
+[Present the findings of your analysis systematically, using tables and figures to illustrate key results.]
+
+\subsection{Descriptive Statistics}
+% TEMPLATE GUIDANCE:
+% 1. Present summary statistics for all key variables
+% 2. Compare treatment and control groups if relevant
+% 3. Discuss sample composition and representativeness
+% 4. Reference Table 1 (main summary statistics table)
+
+[Provide comprehensive summary statistics of main variables. Discuss sample composition and representativeness. Table~\ref{tab:summary_statistics} presents these statistics.]
+
+\subsection{Main Results}
+% TEMPLATE GUIDANCE:
+% 1. Present results in logical progression
+% 2. Start with baseline specification, progressively add controls
+% 3. Discuss both statistical and economic significance
+% 4. Interpret coefficients in context (not just stars)
+% 5. Reference correct table columns and rows
+
+[Discuss the results of your main regression models, presenting coefficients, standard errors, and interpretation.
+Table~\ref{tab:main_results} presents the main results.]
+
+\subsection{Robustness and Sensitivity Checks}
+% TEMPLATE GUIDANCE:
+% 1. Test sensitivity to alternative specifications
+% 2. Try alternative samples (subsamples, different time periods)
+% 3. Try alternative variable measures
+% 4. Include placebo tests or falsification checks
+% 5. Address potential confounds explicitly
+
+[Present additional analyses testing robustness of findings. Address alternative explanations and potential confounds.]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE:
+% 1. Interpret results in context of research question
+% 2. Relate findings to existing literature
+% 3. Discuss economic mechanisms and implications
+% 4. Address policy implications if relevant
+% 5. Acknowledge limitations honestly
+% 6. Suggest directions for future research
+
+[Interpret the results in the context of your research question and the broader literature.
+Discuss economic mechanisms, policy implications if relevant, acknowledge limitations, and suggest future research directions.]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TEMPLATE GUIDANCE:
+% 1. Summarize main findings concisely
+% 2. Emphasize contributions to theory and/or practice
+% 3. Discuss broader implications
+% 4. Suggest specific directions for future research
+% 5. Keep to 1-2 paragraphs typically
+
+[Summarize the main findings and their significance. Highlight contributions to the literature and practical implications. Suggest future research directions.]
+
+\end{comment}
+
+% ------------------------------%
+%          REFERENCES           %
+% ------------------------------%
+
+\clearpage
+\small    % Set text size for references
+\setlength{\bibsep}{0pt}    % Set space between references
+\addcontentsline{toc}{section}{\protect\numberline{}References}     % SECTION HEADER
+\singlespacing    % Set single spacing for references
+\bibliography{References/references}    % Adjust the path to your .bib file
+\normalsize    % Reset text size
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%           MAIN RESULTS SECTION                                 %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% TEMPLATE GUIDANCE:
+% Main empirical results go here. This section should:
+% 1. Present descriptive statistics
+% 2. Display main regression results
+% 3. Include interpretation of coefficients
+% 4. Discuss economic significance
+% 5. Reference all tables and figures clearly
+
+\clearpage
+\input{sections/Results}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%           FIGURES                                              %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% TEMPLATE GUIDANCE:
+% Figures and plots go here. Include:
+% - Event study plots
+% - Time series trends
+% - Distribution plots
+% - Coefficient comparisons
+% All figures should have informative captions and be referenced in text
+
+\clearpage
+\input{sections/Figures}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%           APPENDIX                                             %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% TEMPLATE GUIDANCE:
+% Technical appendix includes:
+% - Variable definitions and construction
+% - Additional robustness checks
+% - Methodology details
+% - Data quality documentation
+% - Supplementary analyses
+
+\clearpage
+\section*{Appendix}
+\label{appendix:variables}
+\input{sections/Appendix}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%   INTERNET APPENDIX (SUPPLEMENTARY RESULTS)                   %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% TEMPLATE GUIDANCE:
+% Online-only appendix for journals that separate print and online content.
+% Includes extensive robustness checks, placebo tests, alternative measures,
+% and supplementary analyses referenced in main text.
+
+\clearpage
+\section*{Internet Appendix}
+\input{sections/Internet_Results}
+
+% ------------------------------%
+%           END DOCUMENT        %
+% ------------------------------%
+
+\end{document}

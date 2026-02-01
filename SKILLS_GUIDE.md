@@ -1,322 +1,326 @@
 # Skills Quick Reference Guide
 
+## Skill Categories
+
+This personal skill collection supports work across five domains:
+
+### 📚 PhD Academic Business Research (3 skills)
+- **pyfixest-latex**: PyFixest econometric models to publication-quality LaTeX (DiD, event studies, panel regression)
+- **stata-accounting-research**: STATA code patterns from published accounting research (entropy balancing, PSM, DiD, RDD, IV)
+- **pandas-pro**: DataFrame manipulation, data cleaning, aggregation, time series analysis
+
+### 💰 Financial Analysis & Services (2 skills)
+- **pandas-pro**: Financial data analysis, portfolio analytics, time series
+- **wrds-data-pull**: WRDS data extraction (Compustat, CRSP, IBES, Thomson Reuters)
+
+### 🏢 Real Estate (Residential/Commercial) (1 skill)
+- **cre-investment-analysis**: Commercial real estate investment analysis, DCF/IRR modeling, business plans, institutional underwriting
+
+### 🤖 AI/ML/AI Agents (3 skills)
+- **ml-pipeline**: ML pipelines with MLflow/Kubeflow, experiment tracking, feature stores
+- **prompt-engineer**: LLM prompt design, chain-of-thought, few-shot learning, evaluation frameworks
+- **mcp-developer**: Model Context Protocol servers/clients, AI tool integration
+
+### 💻 Development & Technical Writing (5 skills)
+- **fastapi-expert**: Async Python APIs with FastAPI, Pydantic V2, async SQLAlchemy
+- **code-documenter**: Docstrings, API docs (OpenAPI/Swagger), documentation sites
+- **code-reviewer**: PR reviews, code quality audits, security checks
+- **debugging-wizard**: Systematic debugging, error investigation, root cause analysis
+- **n8n-skills**: n8n workflow automation, node configuration, workflow patterns
+
+---
+
 ## When to Use Each Skill
 
-### Language Specialists
-- **Python Pro**: Python development, type hints, async patterns, performance optimization
-- **TypeScript Pro**: TypeScript advanced types, type guards, generics, utility types
-- **JavaScript Pro**: Modern JavaScript, async patterns, ES2024+ features
-- **Go Pro**: Go concurrency, interfaces, goroutines, channels
-- **Rust Engineer**: Rust systems programming, ownership, lifetimes, async Rust
-- **SQL Pro**: Advanced SQL, query optimization, window functions, CTEs
-- **C++ Pro**: Modern C++, RAII, templates, performance optimization
-- **Swift Expert**: Swift for iOS/macOS, SwiftUI, Combine, Concurrency
-- **Kotlin Specialist**: Kotlin for Android, coroutines, Flow, Jetpack Compose
-- **C# Developer**: C# .NET development, LINQ, async/await, modern features
-- **PHP Pro**: Modern PHP, Laravel patterns, performance optimization
-- **Java Architect**: Java enterprise, Spring ecosystem, design patterns
+### PhD Academic Business Research
 
-### Backend Frameworks
-- **NestJS Expert**: Building TypeScript backend APIs with NestJS
-- **Django Expert**: Building Python web apps with Django/DRF
-- **FastAPI Expert**: Building async Python APIs with FastAPI
-- **Spring Boot Engineer**: Java enterprise applications with Spring Boot
-- **Laravel Specialist**: PHP web applications with Laravel
-- **Rails Expert**: Ruby on Rails web applications
-- **.NET Core Expert**: .NET Core APIs and applications
+**pyfixest-latex**
+- Use when: Generating regression tables, event study plots, or summary statistics for academic papers
+- Triggers: PyFixest, LaTeX tables, econometric, DiD, event study, fixed effects
+- Output: LaTeX .tex files, PNG figures
 
-### Frontend & Mobile
-- **React Expert**: Building React web applications
-- **Next.js Developer**: Next.js App Router, Server Components, Server Actions
-- **Vue Expert**: Vue 3 applications with Composition API and Pinia (TypeScript)
-- **Vue Expert (JS)**: Vue 3 applications with JavaScript only (JSDoc typing)
-- **Angular Architect**: Angular applications with standalone components
-- **React Native Expert**: Building cross-platform mobile apps (React Native)
-- **Flutter Expert**: Building cross-platform apps with Flutter
+**stata-accounting-research**
+- Use when: Requesting STATA code patterns for empirical accounting research methods
+- Triggers: STATA, accounting research, entropy balancing, PSM, DiD, RDD, IV, Fama-MacBeth
+- Output: STATA .do files with tested syntax
 
-### Infrastructure & Cloud
-- **Kubernetes Specialist**: K8s deployments, Helm charts, cluster management
-- **Terraform Engineer**: Infrastructure as Code, multi-cloud provisioning
-- **Postgres Pro**: PostgreSQL optimization, replication, advanced features
-- **Cloud Architect**: AWS/Azure/GCP architecture, multi-cloud strategies
-- **Database Optimizer**: Database performance tuning, indexing strategies
+**pandas-pro**
+- Use when: Data cleaning, transformation, aggregation for research datasets
+- Triggers: pandas, DataFrame, data cleaning, aggregation, time series
+- Output: Python code with efficient pandas operations
 
-### API & Architecture
-- **GraphQL Architect**: GraphQL schema design, resolvers, federation
-- **API Designer**: RESTful API design, OpenAPI, API versioning
-- **WebSocket Engineer**: Real-time communication, WebSockets, Socket.IO
-- **Microservices Architect**: Microservices patterns, service mesh, distributed systems
-- **MCP Developer**: Model Context Protocol development and integration
-- **Architecture Designer**: System design, choosing architectures, ADRs
-- **Feature Forge**: Creating new features, gathering requirements, writing specs
-- **Spec Miner**: Analyzing existing code, reverse-engineering specifications
+### Financial Analysis & Services
 
-### Quality & Testing
-- **Test Master**: Overall testing strategy (unit, integration, E2E, performance, security)
-- **Playwright Expert**: Browser automation and E2E testing
-- **Code Reviewer**: Conducting thorough code reviews
-- **Code Documenter**: Adding inline documentation and API docs
+**pandas-pro**
+- Use when: Financial data analysis, portfolio analytics, return calculations
+- Triggers: pandas, financial data, portfolio, returns, risk metrics
+- Output: Python code for financial analysis
 
-### DevOps & Operations
-- **DevOps Engineer**: CI/CD, deployment, infrastructure, platform engineering
-- **Monitoring Expert**: Logging, metrics, tracing, alerting, performance testing
-- **SRE Engineer**: Site reliability, incident response, SLO/SLA management
-- **Chaos Engineer**: Chaos testing, resilience engineering, fault injection
-- **CLI Developer**: Command-line tools, CLI frameworks, shell integration
+**wrds-data-pull**
+- Use when: Extracting data from WRDS databases or merging financial datasets
+- Triggers: WRDS, Compustat, CRSP, IBES, CUSIP, GVKEY, PERMNO
+- Output: SQL queries, Python extraction scripts, linking tables
 
-### Security
-- **Secure Code Guardian**: Writing secure code, preventing vulnerabilities
-- **Security Reviewer**: Security code review, SAST analysis, penetration testing
+### Real Estate
 
-### Data & Machine Learning
-- **Pandas Pro**: DataFrame manipulation, data cleaning, aggregation, time series
-- **Spark Engineer**: Apache Spark, PySpark, distributed data processing, Spark SQL
-- **ML Pipeline**: ML pipelines, MLflow, Kubeflow, feature stores, experiment tracking
-- **Prompt Engineer**: LLM prompt design, chain-of-thought, few-shot learning, evaluation
-- **RAG Architect**: RAG systems, vector databases, embeddings, semantic search
-- **Fine-Tuning Expert**: LLM fine-tuning, LoRA, QLoRA, PEFT, model optimization
+**cre-investment-analysis**
+- Use when: Analyzing commercial properties, creating investment memos, DCF/IRR analysis
+- Triggers: commercial real estate, CRE, multifamily, DCF, IRR, NOI, cap rate
+- Output: Investment analysis reports, financial models
 
-### Platform Specialists
-- **Salesforce Developer**: Apex, Lightning Web Components, SOQL, governor limits
-- **Shopify Expert**: Liquid templating, Storefront API, Shopify apps, checkout extensions
-- **WordPress Pro**: WordPress themes, plugins, Gutenberg blocks, WooCommerce
-- **Atlassian MCP**: Jira/Confluence integration via MCP, JQL, CQL queries
+### AI/ML/AI Agents
 
-### Specialized
-- **Legacy Modernizer**: Legacy code modernization, migration strategies
-- **Embedded Systems**: Embedded development, IoT, firmware, real-time systems
-- **Game Developer**: Game development, game engines, graphics, physics
+**ml-pipeline**
+- Use when: Building ML training pipelines, experiment tracking, model lifecycle management
+- Triggers: ML pipeline, MLflow, Kubeflow, model training, experiment tracking
+- Output: Python code for ML pipelines
 
-### Workflow
-- **Debugging Wizard**: Systematic debugging across all languages
-- **Fullstack Guardian**: Implementing features across full stack
+**prompt-engineer**
+- Use when: Designing LLM prompts, optimizing model performance, building evaluation frameworks
+- Triggers: prompt engineering, LLM, chain-of-thought, few-shot, prompt evaluation
+- Output: Prompt designs, evaluation frameworks
 
-## Skill Workflows
+**mcp-developer**
+- Use when: Building MCP servers/clients for AI tool integration
+- Triggers: MCP, Model Context Protocol, AI tools, Claude integration
+- Output: Python/TypeScript MCP server code
 
-### New Feature Development
-1. **Feature Forge** - Define requirements and spec
-2. **Architecture Designer** - Design system architecture (if complex)
-3. **Fullstack Guardian** + Framework Skills - Implement
-4. **Test Master** + **Playwright Expert** - Test comprehensively
-5. **Code Reviewer** - Review code
-6. **Security Reviewer** - Security review
-7. **DevOps Engineer** - Deploy
-8. **Monitoring Expert** - Add observability
+### Development & Technical Writing
 
-### Bug Fixing
-1. **Debugging Wizard** - Identify root cause
-2. **Fullstack Guardian** + Framework Skills - Fix
-3. **Test Master** - Add regression tests
-4. **Code Reviewer** - Review fix
-5. **DevOps Engineer** - Deploy
+**fastapi-expert**
+- Use when: Building async Python APIs with FastAPI
+- Triggers: FastAPI, Pydantic, async Python, REST API, SQLAlchemy async
+- Output: Python API code
 
-### Code Review Process
-1. **Code Reviewer** - General code review
-2. **Security Reviewer** - Security-focused review
-3. **Architecture Designer** - Architectural review (if needed)
+**code-documenter**
+- Use when: Adding docstrings, API docs, or building documentation sites
+- Triggers: documentation, docstrings, OpenAPI, Swagger, API docs
+- Output: Documented code, API specs
 
-### Legacy Code Analysis
-1. **Spec Miner** - Reverse-engineer specs
-2. **Architecture Designer** - Document architecture
-3. **Code Documenter** - Add missing documentation
-4. **Security Reviewer** - Security audit
+**code-reviewer**
+- Use when: Reviewing code for quality, security, or best practices
+- Triggers: code review, PR review, code quality, security
+- Output: Review report with recommendations
+
+**debugging-wizard**
+- Use when: Investigating errors, analyzing stack traces, troubleshooting
+- Triggers: debug, error, bug, exception, stack trace, troubleshoot
+- Output: Root cause analysis, fix recommendations
+
+**n8n-skills**
+- Use when: Building workflow automation with n8n
+- Triggers: n8n, workflow automation, webhook, workflow trigger
+- Output: n8n workflow configurations
+
+---
+
+## Common Workflows
+
+### Academic Research Paper
+
+**Data → Analysis → Output**
+1. **wrds-data-pull** or **pandas-pro** - Extract and clean data
+2. **pyfixest-latex** or **stata-accounting-research** - Run econometric analysis
+3. **code-documenter** - Document methodology
+4. **code-reviewer** - Review analysis code
+
+### Financial Analysis Project
+
+**Data → Analysis → Report**
+1. **wrds-data-pull** - Extract financial data from WRDS
+2. **pandas-pro** - Clean, merge, and analyze data
+3. **code-documenter** - Document analysis
+4. **code-reviewer** - Quality check
+
+### Real Estate Investment Analysis
+
+**Property → Analysis → Decision**
+1. **pandas-pro** - Analyze property/market data
+2. **cre-investment-analysis** - Create investment analysis and DCF model
+3. **code-documenter** - Document assumptions and methodology
+
+### ML/AI Project
+
+**Data → Pipeline → Production**
+1. **pandas-pro** - Data preparation and feature engineering
+2. **ml-pipeline** - Build training pipeline with experiment tracking
+3. **prompt-engineer** - Design LLM components (if applicable)
+4. **mcp-developer** - Build AI integrations
+5. **code-documenter** - Document pipeline
+6. **code-reviewer** - Review implementation
+
+### API Development
+
+**Design → Implement → Test → Document**
+1. **fastapi-expert** - Implement API endpoints
+2. **debugging-wizard** - Debug issues
+3. **code-documenter** - Create OpenAPI documentation
+4. **code-reviewer** - Review code quality and security
+
+### Automation Workflow
+
+**Design → Build → Integrate → Test**
+1. **n8n-skills** - Design workflow
+2. **mcp-developer** - Add AI capabilities (if needed)
+3. **debugging-wizard** - Troubleshoot workflow
+4. **code-documenter** - Document automation
+
+---
 
 ## Decision Trees
 
-### Language Selection
-- **Python Development** → Python Pro
-- **TypeScript/JavaScript** → TypeScript Pro / JavaScript Pro
-- **Go Services** → Go Pro
-- **Systems Programming** → Rust Engineer / C++ Pro
-- **iOS/macOS** → Swift Expert
-- **Android** → Kotlin Specialist
-- **Enterprise .NET** → C# Developer
-- **Enterprise Java** → Java Architect
-- **PHP Web** → PHP Pro
-- **Database Work** → SQL Pro
+### Research & Analysis Tasks
 
-### Backend Framework
-- **TypeScript API** → NestJS Expert
-- **Python Django** → Django Expert
-- **Python Async** → FastAPI Expert
-- **Java Enterprise** → Spring Boot Engineer
-- **PHP Modern** → Laravel Specialist
-- **Ruby Web** → Rails Expert
-- **.NET APIs** → .NET Core Expert
+**What type of analysis?**
+- **Econometric (Python)** → pyfixest-latex
+- **Econometric (STATA)** → stata-accounting-research
+- **Data manipulation** → pandas-pro
+- **Financial data extraction** → wrds-data-pull
+- **Real estate investment** → cre-investment-analysis
 
-### Frontend Framework
-- **React Web** → React Expert
-- **React SSR/SSG** → Next.js Developer
-- **Vue Apps (TypeScript)** → Vue Expert
-- **Vue Apps (JavaScript)** → Vue Expert (JS)
-- **Angular Apps** → Angular Architect
-- **Mobile (JavaScript)** → React Native Expert
-- **Mobile (Dart)** → Flutter Expert
+### Development Tasks
 
-### Infrastructure & Cloud
-- **Container Orchestration** → Kubernetes Specialist
-- **Infrastructure as Code** → Terraform Engineer
-- **Cloud Architecture** → Cloud Architect
-- **Database Performance** → Postgres Pro / Database Optimizer
+**What are you building?**
+- **REST API** → fastapi-expert
+- **ML pipeline** → ml-pipeline
+- **AI integration** → mcp-developer
+- **Workflow automation** → n8n-skills
+- **LLM application** → prompt-engineer
 
-### API Design
-- **GraphQL** → GraphQL Architect
-- **REST API** → API Designer
-- **Real-time** → WebSocket Engineer
-- **Microservices** → Microservices Architect
-- **MCP Integration** → MCP Developer
+### Code Quality Tasks
 
-### Data & Machine Learning
-- **DataFrame Operations** → Pandas Pro
-- **Big Data Processing** → Spark Engineer
-- **ML Training Pipelines** → ML Pipeline
-- **LLM Prompts** → Prompt Engineer
-- **RAG Systems** → RAG Architect
-- **Model Fine-Tuning** → Fine-Tuning Expert
+**What do you need?**
+- **Documentation** → code-documenter
+- **Code review** → code-reviewer
+- **Debugging** → debugging-wizard
 
-### Platform Development
-- **Salesforce CRM** → Salesforce Developer
-- **Shopify E-commerce** → Shopify Expert
-- **WordPress Sites** → WordPress Pro
-- **Jira/Confluence** → Atlassian MCP
-
-### Testing
-- **E2E Browser Tests** → Playwright Expert
-- **All Other Testing** → Test Master
-
-### Operations
-- **CI/CD & Deployment** → DevOps Engineer
-- **Observability** → Monitoring Expert
-- **Reliability** → SRE Engineer
-- **Resilience Testing** → Chaos Engineer
-- **CLI Tools** → CLI Developer
+---
 
 ## Skill Combinations
 
-Common combinations for maximum effectiveness:
+### Research-Focused Combinations
 
-### Full Feature Development
-- Feature Forge + Fullstack Guardian + Framework Skills + Test Master + DevOps Engineer
+**Accounting Research (STATA)**
+```
+wrds-data-pull → stata-accounting-research → code-documenter
+```
 
-### Security-Focused Development
-- Secure Code Guardian + Fullstack Guardian + Security Reviewer + Test Master
+**Finance Research (Python)**
+```
+wrds-data-pull → pandas-pro → pyfixest-latex → code-documenter
+```
 
-### Performance Optimization
-- Architecture Designer + Monitoring Expert + Framework Skills + Database Optimizer
+**Real Estate Research**
+```
+pandas-pro → cre-investment-analysis → code-documenter
+```
 
-### Documentation Sprint
-- Code Documenter + Spec Miner + Architecture Designer
+### Development-Focused Combinations
 
-### Cloud-Native Development
-- Kubernetes Specialist + Terraform Engineer + Cloud Architect + SRE Engineer + Monitoring Expert
+**API Development**
+```
+fastapi-expert → debugging-wizard → code-documenter → code-reviewer
+```
 
-### API Development
-- API Designer + GraphQL Architect + WebSocket Engineer + Microservices Architect
+**ML Pipeline Development**
+```
+pandas-pro → ml-pipeline → prompt-engineer → code-documenter → code-reviewer
+```
 
-### Mobile Development
-- React Native Expert / Flutter Expert + API Designer + DevOps Engineer
+**AI Agent Development**
+```
+mcp-developer → prompt-engineer → fastapi-expert → code-documenter
+```
 
-### Game Development
-- Game Developer + C++ Pro + Performance Optimization + Graphics Programming
+### Full-Stack Workflows
 
-### Legacy Migration
-- Legacy Modernizer + Architecture Designer + Language Specialists + Test Master + Security Reviewer
+**Research Data Pipeline**
+```
+wrds-data-pull → pandas-pro → pyfixest-latex → code-documenter → code-reviewer
+```
 
-### Platform Engineering
-- DevOps Engineer + Kubernetes Specialist + Terraform Engineer + Monitoring Expert + SRE Engineer
+**Financial Analysis Platform**
+```
+wrds-data-pull → pandas-pro → fastapi-expert → code-documenter → code-reviewer
+```
 
-### Embedded/IoT
-- Embedded Systems + Rust Engineer / C++ Pro + Security Reviewer
+**AI-Powered Research Tool**
+```
+wrds-data-pull → pandas-pro → ml-pipeline → mcp-developer → prompt-engineer → code-documenter
+```
 
-### Data & ML Pipeline
-- Pandas Pro + Spark Engineer + ML Pipeline + Monitoring Expert
+---
 
-### AI/LLM Development
-- Prompt Engineer + RAG Architect + Fine-Tuning Expert + Python Pro
+## Example Prompts by Domain
 
-### E-commerce Platform
-- Shopify Expert + React Expert + API Designer + DevOps Engineer
+### PhD Academic Business Research
 
-### CRM Development
-- Salesforce Developer + API Designer + Security Reviewer + Test Master
+- "Extract Compustat data for my accounting study" → wrds-data-pull
+- "Run DiD analysis and generate LaTeX tables" → pyfixest-latex
+- "Show me STATA code for entropy balancing" → stata-accounting-research
+- "Clean this panel dataset for regression analysis" → pandas-pro
+- "Merge CRSP and Compustat using CCM linking table" → wrds-data-pull
 
-### Enterprise Java
-- Java Architect + Spring Boot Engineer + Microservices Architect + DevOps Engineer
+### Financial Analysis & Services
 
-### Modern Web App
-- Next.js Developer / Vue Expert / Angular Architect + TypeScript Pro + API Designer + DevOps Engineer
+- "Pull IBES analyst estimates for tech companies" → wrds-data-pull
+- "Calculate portfolio returns and risk metrics" → pandas-pro
+- "Analyze stock price reactions around earnings announcements" → pandas-pro
+- "Build financial ratios from Compustat fundamentals" → wrds-data-pull
+- "Create event study with CRSP daily returns" → pandas-pro + pyfixest-latex
+
+### Real Estate
+
+- "Analyze this multifamily acquisition opportunity" → cre-investment-analysis
+- "Build DCF model for office building investment" → cre-investment-analysis
+- "Create investment memo for REIT portfolio" → cre-investment-analysis
+- "Evaluate mixed-use development feasibility" → cre-investment-analysis
+- "Perform sensitivity analysis on cap rate assumptions" → cre-investment-analysis
+
+### AI/ML/AI Agents
+
+- "Build MLflow experiment tracking pipeline" → ml-pipeline
+- "Design prompts for financial text classification" → prompt-engineer
+- "Create MCP server for database access" → mcp-developer
+- "Optimize this LLM prompt for accuracy" → prompt-engineer
+- "Build feature store for ML pipeline" → ml-pipeline
+
+### Development & Technical Writing
+
+- "Implement async FastAPI endpoint with Pydantic V2" → fastapi-expert
+- "Add OpenAPI documentation to my API" → code-documenter + fastapi-expert
+- "Review this code for security vulnerabilities" → code-reviewer
+- "Debug this async Python error" → debugging-wizard
+- "Create n8n workflow to process webhooks" → n8n-skills
+
+---
 
 ## Tips for Effective Use
 
-1. **Be Specific**: Mention the technology/framework to activate the right skill
-2. **Context Matters**: Provide context about your tech stack
-3. **Combine Skills**: Don't hesitate to ask for multiple perspectives
-4. **Security First**: Always run Security Reviewer on critical code
-5. **Document**: Use Code Documenter for public APIs and complex logic
+1. **Be Specific About Domain**: Mention whether it's research, finance, real estate, or development work
+2. **Specify Data Source**: For research, mention WRDS, Compustat, CRSP, etc.
+3. **State Your Output Goal**: LaTeX tables, investment memo, API endpoint, etc.
+4. **Combine Skills**: Complex projects benefit from multiple skill perspectives
+5. **Document Everything**: Use code-documenter for reproducibility and academic rigor
 
-## Examples
+---
 
-### Good Prompts
-- "Help me design a microservices architecture for an e-commerce platform" → Microservices Architect + Architecture Designer
-- "Implement user authentication in my NestJS API" → NestJS Expert + Secure Code Guardian
-- "Debug this memory leak in my React app" → Debugging Wizard + React Expert
-- "Review this code for security issues" → Security Reviewer
-- "Set up monitoring for my FastAPI application" → Monitoring Expert + FastAPI Expert
-- "Build a GraphQL API with subscriptions" → GraphQL Architect + WebSocket Engineer
-- "Deploy a Python app to Kubernetes" → Kubernetes Specialist + Python Pro
-- "Optimize PostgreSQL queries" → Postgres Pro + SQL Pro
-- "Migrate from Angular to React" → Legacy Modernizer + React Expert
-- "Create a CLI tool in Go" → CLI Developer + Go Pro
-- "Set up chaos testing for microservices" → Chaos Engineer + Microservices Architect
-- "Build a Next.js app with server components" → Next.js Developer + TypeScript Pro
-- "Implement WebSocket chat" → WebSocket Engineer + API Designer
-- "Terraform setup for AWS multi-region" → Terraform Engineer + Cloud Architect
-- "Build a game engine in C++" → Game Developer + C++ Pro
-- "Modernize legacy Java monolith" → Legacy Modernizer + Java Architect + Microservices Architect
+## Quick Reference by Use Case
 
-### Language-Specific
-- "Write idiomatic Rust with async" → Rust Engineer
-- "TypeScript generics for API client" → TypeScript Pro
-- "Python type hints and protocols" → Python Pro
-- "Go channels and concurrency patterns" → Go Pro
-- "SwiftUI reactive patterns" → Swift Expert
-- "Kotlin coroutines best practices" → Kotlin Specialist
-- "Advanced SQL window functions" → SQL Pro
+**"I need to..."**
 
-### Framework-Specific
-- "Spring Boot microservice architecture" → Spring Boot Engineer
-- "Laravel API with queues" → Laravel Specialist
-- "Rails with Hotwire and Turbo" → Rails Expert
-- ".NET Core minimal APIs" → .NET Core Expert
-- "Vue 3 Composition API patterns" → Vue Expert
-- "Angular signals and standalone components" → Angular Architect
-
-### Infrastructure & Cloud
-- "Kubernetes autoscaling and HPA" → Kubernetes Specialist
-- "Multi-cloud Terraform modules" → Terraform Engineer
-- "AWS serverless architecture" → Cloud Architect
-- "PostgreSQL replication setup" → Postgres Pro
-- "Database indexing strategy" → Database Optimizer
-
-### Specific Requests
-- "Generate OpenAPI docs for my Django REST API" → Code Documenter + API Designer
-- "Write Playwright tests for the login flow" → Playwright Expert
-- "Analyze this legacy codebase and create a spec" → Spec Miner
-- "Help me implement RBAC in NestJS" → NestJS Expert + Secure Code Guardian
-- "Set up SRE practices and SLOs" → SRE Engineer + Monitoring Expert
-- "Design MCP server for tool integration" → MCP Developer
-- "Embedded firmware for IoT device" → Embedded Systems + Rust Engineer
-
-### Data & ML
-- "Clean and transform CSV data with pandas" → Pandas Pro
-- "Build a PySpark ETL pipeline" → Spark Engineer
-- "Set up MLflow experiment tracking" → ML Pipeline
-- "Design prompts for classification task" → Prompt Engineer
-- "Build a RAG system with Pinecone" → RAG Architect
-- "Fine-tune Llama 2 with LoRA" → Fine-Tuning Expert
-
-### Platform Development
-- "Build Lightning Web Component for Salesforce" → Salesforce Developer
-- "Create custom Shopify checkout extension" → Shopify Expert
-- "Develop WordPress plugin with Gutenberg blocks" → WordPress Pro
-- "Query Jira issues via MCP server" → Atlassian MCP
+| Task | Skills to Use |
+|------|---------------|
+| Pull financial data from WRDS | wrds-data-pull |
+| Run econometric analysis (Python) | pyfixest-latex |
+| Run econometric analysis (STATA) | stata-accounting-research |
+| Clean and analyze data | pandas-pro |
+| Analyze CRE investment | cre-investment-analysis |
+| Build ML pipeline | ml-pipeline |
+| Design LLM prompts | prompt-engineer |
+| Create AI integration | mcp-developer |
+| Build Python API | fastapi-expert |
+| Document code | code-documenter |
+| Review code quality | code-reviewer |
+| Fix bugs | debugging-wizard |
+| Automate workflows | n8n-skills |

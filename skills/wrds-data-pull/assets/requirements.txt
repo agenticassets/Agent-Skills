@@ -1,0 +1,19 @@
+# WRDS Data Pull - Required Dependencies
+# =======================================
+
+# Core data manipulation
+pandas>=1.5.0
+numpy>=1.23.0
+
+# WRDS database access
+wrds>=3.1.0
+
+# Statistical analysis (optional but recommended)
+scipy>=1.9.0
+statsmodels>=0.13.0
+
+# Data formats
+pyarrow>=10.0.0  # For parquet files
+
+# Optional: Export to Stata
+pandas-stata>=0.1.0  # For .dta file creation

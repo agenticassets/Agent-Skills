@@ -16,7 +16,7 @@ Total: 15 templates
 - [Build a Voice AI Chatbot with ElevenLabs and InfraNodus Knowledge Experts](./4484-build-a-voice-ai-chatbot-with-elevenlabs-and-infranodus-know.md) - 31,420 views
 - [Gmail AI Email Manager](./4722-gmail-ai-email-manager.md) - 29,066 views
 - [Local Chatbot with Retrieval Augmented Generation (RAG)](./5148-local-chatbot-with-retrieval-augmented-generation-rag.md) - 28,717 views
-- [🤖 AI content generation for Auto Service 🚘 Automate your social media📲!](./4600--ai-content-generation-for-auto-service-automate-your-social.md) - 26,664 views
+- [🤖 AI content generation for Auto Service 🚘 Automate your social media📲!](./4600-ai-content-generation-for-auto-service-automate-your-social.md) - 26,664 views
 - [Create & Upload AI-Generated ASMR YouTube Shorts with Seedance, Fal AI, and GPT-4](./5110-create-upload-ai-generated-asmr-youtube-shorts-with-seedance.md) - 24,339 views
 - [Automate Sales Cold Calling Pipeline with Apify, GPT-4o, and WhatsApp](./5449-automate-sales-cold-calling-pipeline-with-apify-gpt-4o-and-w.md) - 21,581 views
 - [Intelligent Email Organization with AI-Powered Content Classification for Gmail](./4557-intelligent-email-organization-with-ai-powered-content-class.md) - 20,908 views

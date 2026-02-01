@@ -1,0 +1,25 @@
+{
+  "name": "claude-equity-research-marketplace",
+  "owner": {
+    "name": "quant-sentiment-ai",
+    "email": "quant.sentiment.ai@gmail.com"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for professional equity research and financial analysis",
+    "version": "1.0.0",
+    "pluginRoot": "commands"
+  },
+  "plugins": [
+    {
+      "name": "trading-ideas",
+      "source": "./commands/trading-ideas.md",
+      "description": "Institutional-grade equity research reports via /trading-ideas command. Analyzes company financials, technical indicators, market positioning, insider activity, and provides BUY/SELL/HOLD recommendations with price targets.",
+      "version": "1.0.0",
+      "author": {
+        "name": "quant-sentiment-ai",
+        "email": "quant.sentiment.ai@gmail.com"
+      },
+      "tags": ["finance", "equity-research", "trading", "stock-analysis", "investment", "fundamental-analysis", "technical-analysis", "ai-powered"]
+    }
+  ]
+}

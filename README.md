@@ -28,8 +28,6 @@ This is a personal collection of specialized Claude Code skills organized around
 - **🤖 AI/ML/AI Agents**: ML pipelines, prompt engineering, AI tool integration via MCP
 - **💻 Development & Technical Writing**: FastAPI APIs, code quality, documentation, automation
 
-**Originally forked from:** [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills)
-
 ---
 
 ## Quick Start
